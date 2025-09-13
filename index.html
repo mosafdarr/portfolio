@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Safdar - Python Backend Engineer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/profile.jpg">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'dark-bg': '#000000',
+                        'dark-card': '#0f0f23',
+                        'elevated-card': '#1e1e3f',
+                        'dark-border': '#1e3a8a',
+                        'navy-primary': '#1e3a8a',
+                        'navy-hover': '#1e40af',
+                        'blue-accent': '#3b82f6',
+                        'cyan-accent': '#06b6d4',
+                        'text-primary': '#FFFFFF',
+                        'text-secondary': '#e2e8f0',
+                        'text-muted': '#94a3b8',
+                        'red-accent': '#ef4444'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-dark-bg text-text-primary font-inter overflow-x-hidden">
+    
+    <!-- Header Navigation -->
+    <header class="fixed top-0 w-full bg-dark-bg/95 backdrop-blur-sm z-50">
+        <nav class="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+            <div class="text-xl font-bold text-white">
+                Muhammad Safdar
+            </div>
+            
+            <!-- Desktop Navigation -->
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#services" class="text-text-secondary hover:text-text-primary transition-colors">Services</a>
+                <a href="#portfolio" class="text-text-secondary hover:text-text-primary transition-colors">Portfolio</a>
+                <a href="#testimonials" class="text-text-secondary hover:text-text-primary transition-colors">Experience</a>
+                <a href="#about" class="text-text-secondary hover:text-text-primary transition-colors">About</a>
+                <a href="https://behindthedeploy.hashnode.dev/" class="text-text-secondary hover:text-text-primary transition-colors" target="_blank" rel="noopener">
+                    Blog
+                </a>
+                <a href="#contact" class="bg-navy-primary hover:bg-navy-hover px-6 py-2 rounded-full transition-colors text-text-primary font-medium">
+                    Free Consultation
+                </a>
+            </div>
+            
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-xl"></i>
+            </button>
+        </nav>
+        
+        <!-- Mobile Navigation -->
+        <div id="mobile-menu" class="hidden md:hidden bg-dark-bg border-t border-dark-border">
+            <div class="container mx-auto px-6 py-4 space-y-4">
+                <a href="#services" class="block text-text-secondary hover:text-text-primary transition-colors">Services</a>
+                <a href="#portfolio" class="block text-text-secondary hover:text-text-primary transition-colors">Portfolio</a>
+                <a href="#testimonials" class="block text-text-secondary hover:text-text-primary transition-colors">Experience</a>
+                <a href="#about" class="block text-text-secondary hover:text-text-primary transition-colors">About</a>
+                <a href="#contact" class="block bg-navy-primary hover:bg-navy-hover px-6 py-2 rounded-full transition-colors text-text-primary font-medium text-center">
+                    Free Consultation
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-24 px-6 lg:px-12 hero-section">
+        <div class="container mx-auto text-center max-w-4xl">
+            <div class="mb-6">
+                <span class="inline-block bg-navy-primary/20 text-navy-primary px-4 py-2 rounded-full text-sm font-medium border border-navy-primary/30 uppercase tracking-wider">
+                    Python Backend Development
+                </span>
+            </div>
+            
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                I build high performance AI driven data systems & 
+                <span class="tech-highlight">scalable backends</span>
+            </h1>
+            
+            <p class="text-xl text-text-secondary mb-8 leading-relaxed max-w-3xl mx-auto">
+                Building cloud native backends, data pipelines, and RAG/LLM integrations.
+            </p>
+            
+            <div class="flex flex-wrap justify-center gap-8 mb-12 text-text-secondary">
+                <div class="flex items-center space-x-2">
+                    <span>• 4+ years Python experience</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span>• Cloud-native & AI systems</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                    <span>• 8+ production deployments</span>
+                </div>
+            </div>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-navy-primary hover:bg-navy-hover px-8 py-4 rounded-full text-lg font-medium transition-all transform hover:scale-105 text-text-primary">
+                    Get a Free Technical Consultation
+                </a>
+                <a href="#portfolio" class="border border-navy-primary hover:border-blue-accent px-8 py-4 rounded-full text-lg font-medium transition-all text-navy-primary hover:text-blue-accent">
+                    View My Projects
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services/Pricing Section -->
+    <section id="services" class="py-20 px-6 lg:px-12">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    What I Can Build For You
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Specialized in Python backend development, AI systems, and data engineering solutions.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto mb-16">
+                <!-- Backend Development -->
+                <div class="bg-dark-card border border-dark-border rounded-2xl p-8 pricing-card relative">
+                    <div class="absolute top-6 right-6">
+                        <span class="bg-navy-primary text-text-primary px-3 py-1 rounded-full text-xs font-medium most-popular-badge">
+                            Most Popular
+                        </span>
+                    </div>
+                    
+                    <div class="w-12 h-12 bg-navy-primary/20 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-server text-navy-primary text-xl"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-2">Backend Development</h3>
+                    <p class="text-text-secondary mb-4">FastAPI, Django & Scalable APIs</p>
+                    
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$40</span>
+                        <span class="text-text-muted">/hour</span>
+                    </div>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">REST/GraphQL APIs with FastAPI</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Database design (PostgreSQL, MongoDB)</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Authentication & security implementation</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Performance optimization & caching</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Comprehensive testing & documentation</span>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-navy-primary hover:bg-navy-hover py-3 rounded-full font-medium transition-colors">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- AI/ML Integration -->
+                <div class="bg-dark-card border border-dark-border rounded-2xl p-8 pricing-card">
+                    <div class="w-12 h-12 bg-blue-accent/20 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-blue-accent text-xl"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-2">AI/ML Integration</h3>
+                    <p class="text-text-secondary mb-4">RAG, LLM & AI-Powered Systems</p>
+                    
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$60</span>
+                        <span class="text-text-muted">/hour</span>
+                    </div>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">RAG systems & vector databases</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">LLM integration & prompt engineering</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Custom AI model deployment</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Data preprocessing & pipelines</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Performance monitoring & optimization</span>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-transparent border border-dark-border hover:border-navy-primary py-3 rounded-full font-medium transition-colors">
+                        Get Started
+                    </button>
+                </div>
+                
+                <!-- Data Engineering -->
+                <div class="bg-dark-card border border-dark-border rounded-2xl p-8 pricing-card">
+                    <div class="w-12 h-12 bg-cyan-accent/20 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-database text-cyan-accent text-xl"></i>
+                    </div>
+                    
+                    <h3 class="text-2xl font-bold mb-2">Data Engineering</h3>
+                    <p class="text-text-secondary mb-4">ETL Pipelines & Data Processing</p>
+                    
+                    <div class="mb-6">
+                        <span class="text-4xl font-bold">$45</span>
+                        <span class="text-text-muted">/hour</span>
+                    </div>
+                    
+                    <div class="space-y-3 mb-8">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Web scraping (Scrapy, Selenium)</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">ETL pipeline development</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Apache Airflow workflow automation</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Data warehouse design & optimization</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Real-time data processing</span>
+                        </div>
+                    </div>
+                    
+                    <button class="w-full bg-transparent border border-dark-border hover:border-navy-primary py-3 rounded-full font-medium transition-colors">
+                        Get Started
+                    </button>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <p class="text-text-secondary mb-6">
+                    Need a custom solution or have questions about your project?
+                </p>
+                <a href="#contact" class="text-navy-primary hover:text-blue-accent underline">
+                    Book a free consultation
+                </a>
+                <span class="text-text-secondary"> and let's discuss how I can help scale your backend systems.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="py-20 px-6 lg:px-12">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Featured Projects & Experience
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Real-world Python applications and data systems I've built
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto space-y-16">
+                <!-- Project 1 - AI-Powered Data Pipeline -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-gradient-to-br from-navy-primary/20 to-blue-accent/20 rounded-2xl p-8 h-80 flex items-center justify-center border border-dark-border portfolio-image-placeholder">
+                            <div class="text-center">
+                                <div class="text-6xl mb-4">🤖</div>
+                                <div class="text-xl font-bold">AI Data Pipeline</div>
+                                <div class="text-sm text-text-muted mt-2">FastAPI + RAG System</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="mb-4">
+                            <span class="text-navy-primary text-sm font-medium">Conovo Technologies Inc.</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">AI-Powered RAG System</h3>
+                        <p class="text-text-secondary mb-4">FastAPI + Vector Database Integration</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check text-cyan-accent"></i>
+                                <span class="text-text-secondary">Built RAG system processing 10K+ documents daily</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check text-cyan-accent"></i>
+                                <span class="text-text-secondary">FastAPI backend with 99.9% uptime</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check text-cyan-accent"></i>
+                                <span class="text-text-secondary">Vector embeddings & similarity search</span>
+                            </div>
+                            <div class="flex items-center space-x-3">
+                                <i class="fas fa-check text-cyan-accent"></i>
+                                <span class="text-text-secondary">Real-time data processing with Redis caching</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-navy-primary/20 text-navy-primary rounded-full text-sm">Python</span>
+                            <span class="px-3 py-1 bg-blue-accent/20 text-blue-accent rounded-full text-sm">FastAPI</span>
+                            <span class="px-3 py-1 bg-cyan-accent/20 text-cyan-accent rounded-full text-sm">PostgreSQL</span>
+                            <span class="px-3 py-1 bg-red-accent/20 text-red-accent rounded-full text-sm">Redis</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 2 - E-commerce Backend -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <div class="bg-gradient-to-br from-cyan-accent/20 to-blue-accent/20 rounded-2xl p-8 h-80 flex items-center justify-center border border-dark-border portfolio-image-placeholder">
+                            <div class="text-center">
+                                <div class="text-6xl mb-4">🛒</div>
+                                <div class="text-xl font-bold">E-commerce API</div>
+                                <div class="text-sm text-text-muted mt-2">Django + AWS</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="mb-4">
+                            <span class="text-navy-primary text-sm font-medium">Cloud-Native System</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Scalable E-commerce Backend</h3>
+                        <p class="text-text-secondary mb-4">Django REST API with Microservices Architecture</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check text-cyan-accent mt-1"></i>
+                                <span class="text-text-secondary">Microservices handling 100K+ daily transactions</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check text-cyan-accent mt-1"></i>
+                                <span class="text-text-secondary">AWS deployment (EC2, Lambda, SQS, S3)</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check text-cyan-accent mt-1"></i>
+                                <span class="text-text-secondary">Payment integration & order management</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check text-cyan-accent mt-1"></i>
+                                <span class="text-text-secondary">CI/CD pipeline with Docker containers</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-navy-primary/20 text-navy-primary rounded-full text-sm">Django</span>
+                            <span class="px-3 py-1 bg-blue-accent/20 text-blue-accent rounded-full text-sm">AWS</span>
+                            <span class="px-3 py-1 bg-cyan-accent/20 text-cyan-accent rounded-full text-sm">Docker</span>
+                            <span class="px-3 py-1 bg-red-accent/20 text-red-accent rounded-full text-sm">MongoDB</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Project 3 - Data Scraping System -->
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="order-2 lg:order-1">
+                        <div class="bg-gradient-to-br from-blue-accent/20 to-navy-primary/20 rounded-2xl p-8 h-80 flex items-center justify-center border border-dark-border portfolio-image-placeholder">
+                            <div class="text-center">
+                                <div class="text-6xl mb-4">🕷️</div>
+                                <div class="text-xl font-bold">Web Scraping Engine</div>
+                                <div class="text-sm text-text-muted mt-2">Scrapy + Airflow</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <div class="mb-4">
+                            <span class="text-navy-primary text-sm font-medium">Data Engineering Project</span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-4">Automated Data Extraction</h3>
+                        <p class="text-text-secondary mb-4">Large-Scale Web Scraping & ETL Pipeline</p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check text-cyan-accent mt-1"></i>
+                                <span class="text-text-secondary">Scrapy framework extracting 1M+ records daily</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check text-cyan-accent mt-1"></i>
+                                <span class="text-text-secondary">Apache Airflow orchestration & scheduling</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check text-cyan-accent mt-1"></i>
+                                <span class="text-text-secondary">Data validation & quality monitoring</span>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <i class="fas fa-check text-cyan-accent mt-1"></i>
+                                <span class="text-text-secondary">Selenium for dynamic content extraction</span>
+                            </div>
+                        </div>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-navy-primary/20 text-navy-primary rounded-full text-sm">Scrapy</span>
+                            <span class="px-3 py-1 bg-blue-accent/20 text-blue-accent rounded-full text-sm">Airflow</span>
+                            <span class="px-3 py-1 bg-cyan-accent/20 text-cyan-accent rounded-full text-sm">Selenium</span>
+                            <span class="px-3 py-1 bg-red-accent/20 text-red-accent rounded-full text-sm">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <p class="text-text-secondary mb-6">
+                    Want to see more projects or discuss a custom solution?
+                </p>
+                <a href="#contact" class="text-navy-primary hover:text-blue-accent underline">
+                    Schedule a technical consultation
+                </a>
+                <span class="text-text-secondary"> and let's explore how I can help with your backend challenges.</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience/Testimonials Section -->
+    <section id="testimonials" class="py-20 px-6 lg:px-12">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    Professional Experience
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    4+ years building scalable systems and leading technical implementations
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Experience 1 -->
+                <div class="bg-dark-card border border-dark-border rounded-2xl p-8 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-navy-primary rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-building text-text-primary"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-text-primary">Conovo Technologies Inc.</div>
+                            <div class="text-text-muted text-sm">Software Engineer</div>
+                        </div>
+                    </div>
+                    <div class="mb-6">
+                        <i class="fas fa-quote-left text-3xl text-dark-border opacity-50"></i>
+                    </div>
+                    <p class="text-text-secondary mb-8 leading-relaxed">
+                        Led development of AI-powered systems and data pipelines. Built RAG systems, FastAPI backends, and managed cloud infrastructure on AWS. Specialized in Python development and LLM integration.
+                    </p>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="px-3 py-1 bg-navy-primary/20 text-navy-primary rounded-full text-xs">Python</span>
+                        <span class="px-3 py-1 bg-blue-accent/20 text-blue-accent rounded-full text-xs">FastAPI</span>
+                        <span class="px-3 py-1 bg-cyan-accent/20 text-cyan-accent rounded-full text-xs">AWS</span>
+                        <span class="px-3 py-1 bg-red-accent/20 text-red-accent rounded-full text-xs">RAG/LLM</span>
+                    </div>
+                </div>
+                
+                <!-- Skills Highlight -->
+                <div class="bg-dark-card border border-dark-border rounded-2xl p-8 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-accent rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-code text-text-primary"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-text-primary">Technical Expertise</div>
+                            <div class="text-text-muted text-sm">Core Technologies</div>
+                        </div>
+                    </div>
+                    <div class="space-y-4 mb-6">
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Python & FastAPI</span>
+                            <span class="text-cyan-accent font-bold">Expert</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Django & REST APIs</span>
+                            <span class="text-cyan-accent font-bold">Expert</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">AWS Cloud Services</span>
+                            <span class="text-blue-accent font-bold">Advanced</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">Data Engineering</span>
+                            <span class="text-blue-accent font-bold">Advanced</span>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span class="text-text-secondary">AI/ML Integration</span>
+                            <span class="text-navy-primary font-bold">Proficient</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Achievements -->
+                <div class="bg-dark-card border border-dark-border rounded-2xl p-8 testimonial-card">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-cyan-accent rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-trophy text-text-primary"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-text-primary">Key Achievements</div>
+                            <div class="text-text-muted text-sm">Project Impact</div>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Built systems handling 100K+ daily requests</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Deployed 8+ production applications</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Implemented CI/CD for 90% faster deployments</span>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-check text-cyan-accent mt-1"></i>
+                            <span class="text-text-secondary">Optimized database queries reducing latency by 60%</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-20 px-6 lg:px-12">
+        <div class="container mx-auto">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">
+                    My Development Process
+                </h2>
+                <p class="text-xl text-text-secondary">
+                    Systematic approach to building robust, scalable backend solutions
+                </p>
+            </div>
+            
+            <div class="max-w-4xl mx-auto space-y-8">
+                <!-- Step 1 -->
+                <div class="flex items-start space-x-6 process-step">
+                    <div class="flex-shrink-0 w-12 h-12 bg-navy-primary rounded-full flex items-center justify-center text-text-primary font-bold text-xl step-number">
+                        1
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Requirements Analysis</h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Deep dive into your technical requirements, data flow, scalability needs, and integration points. We'll define the architecture, tech stack, and project timeline together.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 2 -->
+                <div class="flex items-start space-x-6 process-step">
+                    <div class="flex-shrink-0 w-12 h-12 bg-navy-primary rounded-full flex items-center justify-center text-text-primary font-bold text-xl step-number">
+                        2
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">System Design & Architecture</h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Create detailed system architecture, database schemas, API specifications, and deployment strategies. Every component is designed for performance and maintainability.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 3 -->
+                <div class="flex items-start space-x-6 process-step">
+                    <div class="flex-shrink-0 w-12 h-12 bg-navy-primary rounded-full flex items-center justify-center text-text-primary font-bold text-xl step-number">
+                        3
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Development & Testing</h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Agile development with continuous integration. Regular code reviews, comprehensive testing (unit, integration, load), and weekly progress updates with working demos.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 4 -->
+                <div class="flex items-start space-x-6 process-step">
+                    <div class="flex-shrink-0 w-12 h-12 bg-navy-primary rounded-full flex items-center justify-center text-text-primary font-bold text-xl step-number">
+                        4
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Deployment & Optimization</h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Cloud deployment with CI/CD pipelines, monitoring setup, performance optimization, and security hardening. Your system goes live with full observability.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Step 5 -->
+                <div class="flex items-start space-x-6 process-step">
+                    <div class="flex-shrink-0 w-12 h-12 bg-navy-primary rounded-full flex items-center justify-center text-text-primary font-bold text-xl step-number">
+                        5
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-3">Maintenance & Support</h3>
+                        <p class="text-text-secondary leading-relaxed">
+                            Ongoing monitoring, performance optimization, bug fixes, and feature enhancements. Documentation handover and knowledge transfer to your team if needed.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-16">
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Every project gets full documentation, comprehensive testing, and production-ready code that you can confidently scale and maintain.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 px-6 lg:px-12">
+        <div class="container mx-auto">
+            <div class="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
+                <div>
+                    <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                        Hi, I'm Muhammad Safdar
+                    </h2>
+                    <h3 class="text-xl text-navy-primary mb-6 font-medium">
+                        Python Backend Engineer & AI Systems Specialist
+                    </h3>
+                    
+                    <div class="space-y-6 text-text-secondary leading-relaxed">
+                        <p>
+                            With 4+ years of experience, I specialize in building cloud-native backends, data pipelines, and AI-driven systems. My expertise spans Python, FastAPI, Django, and modern cloud technologies.
+                        </p>
+                        
+                        <p>
+                            I focus on developing scalable microservices, RAG systems, and LLM integrations that power data-heavy applications serving thousands of users.
+                        </p>
+                        
+                        <p>
+                            I'm passionate about clean code, system architecture, and helping businesses leverage AI and data to solve real-world problems. Based in Pakistan, Pakistan, I work with clients globally.
+                        </p>
+                    </div>
+                    
+                    <div class="mt-8">
+                        <h4 class="text-xl font-bold mb-4 text-text-primary">Technical Focus Areas</h4>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-code text-navy-primary"></i>
+                                <span class="text-text-secondary">Backend APIs</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-database text-blue-accent"></i>
+                                <span class="text-text-secondary">Data Engineering</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-brain text-cyan-accent"></i>
+                                <span class="text-text-secondary">AI/ML Systems</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-cloud text-navy-primary"></i>
+                                <span class="text-text-secondary">Cloud Architecture</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 space-y-4">
+                        <div class="flex items-center space-x-4">
+                            <a href="https://linkedin.com/in/mosafdar" class="text-navy-primary hover:text-blue-accent transition-colors">
+                                <i class="fab fa-linkedin text-2xl"></i>
+                            </a>
+                            <a href="https://github.com/mosafdarr" class="text-navy-primary hover:text-blue-accent transition-colors">
+                                <i class="fab fa-github text-2xl"></i>
+                            </a>
+                            <a href="mailto:mosafdaralii@gmail.com" class="text-navy-primary hover:text-blue-accent transition-colors">
+                                <i class="fas fa-envelope text-2xl"></i>
+                            </a>
+                        </div>
+                        <button class="bg-navy-primary hover:bg-navy-hover px-8 py-3 rounded-full font-medium transition-colors">
+                            Let's Build Something Great Together
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="flex justify-center lg:justify-end items-center">
+                    <div class="relative w-80 h-96 bg-gradient-to-br from-navy-primary/30 to-blue-accent/20 rounded-2xl border border-dark-border shadow-xl flex items-center justify-center overflow-hidden">
+                        <img src="images/profile.jpg" alt="Muhammad Safdar"
+                             class="w-full h-full object-cover rounded-2xl transition-transform duration-300 hover:scale-105" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="contact" class="py-20 px-6 lg:px-12">
+        <div class="container mx-auto text-center max-w-4xl">
+            <div class="mb-6">
+                <span class="inline-block bg-navy-primary/20 text-navy-primary px-4 py-2 rounded-full text-sm font-medium border border-navy-primary/30">
+                    Ready to Scale Your Backend?
+                </span>
+            </div>
+            
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">
+                Let's Build Your Next 
+                <span class="tech-highlight">High-Performance System</span>
+            </h2>
+            
+            <p class="text-xl text-text-secondary mb-8 leading-relaxed">
+                Get expert Python backend development, AI integration, and data engineering solutions. Free technical consultation to discuss your project requirements.
+            </p>
+            
+            <div class="mb-8">
+                <p class="text-cyan-accent font-medium text-lg">
+                    Available for new projects • Remote collaboration worldwide
+                </p>
+            </div>
+            
+            <div class="mb-8">
+                <a href="mailto:mosafdaralii@gmail.com" class="inline-flex items-center space-x-2 bg-navy-primary hover:bg-navy-hover px-8 py-4 rounded-full text-lg font-medium transition-all transform hover:scale-105">
+                    <span>Start Your Project</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 text-text-secondary mb-8">
+                <div class="flex items-center justify-center space-x-2">
+                    <i class="fas fa-check-circle text-cyan-accent"></i>
+                    <span>Free consultation</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <i class="fas fa-check-circle text-cyan-accent"></i>
+                    <span>Custom solution design</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <i class="fas fa-check-circle text-cyan-accent"></i>
+                    <span>Transparent pricing</span>
+                </div>
+                <div class="flex items-center justify-center space-x-2">
+                    <i class="fas fa-check-circle text-cyan-accent"></i>
+                    <span>Production-ready code</span>
+                </div>
+            </div>
+            
+            <div class="text-center">
+                <div class="flex flex-wrap justify-center gap-6 text-text-muted mb-4">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-envelope"></i>
+                        <span>mosafdaralii@gmail.com</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-phone"></i>
+                        <span>+92 (308) - 1120027</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Pakistan</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 px-6 lg:px-12 bg-dark-card border-t border-dark-border">
+        <div class="container mx-auto">
+            <div class="text-center mb-8">
+                <h3 class="text-xl font-bold mb-4">Ready to Scale Your Backend Systems?</h3>
+                <div class="flex justify-center space-x-6 mb-6">
+                    <span class="text-text-secondary">Python Development</span>
+                    <span class="text-text-secondary">AI Integration</span>
+                    <span class="text-text-secondary">Data Engineering</span>
+                </div>
+                
+                <div class="flex justify-center space-x-6 mb-6">
+                    <a href="https://linkedin.com/in/mosafdar" class="text-text-secondary hover:text-navy-primary transition-colors">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com/mosafdarr" class="text-text-secondary hover:text-navy-primary transition-colors">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="mailto:mosafdaralii@gmail.com" class="text-text-secondary hover:text-navy-primary transition-colors">
+                        <i class="fas fa-envelope text-xl"></i>
+                    </a>
+                </div>
+                
+                <button class="bg-navy-primary hover:bg-navy-hover px-8 py-3 rounded-full font-medium transition-colors">
+                    Get in touch
+                </button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+</body>
+</html>

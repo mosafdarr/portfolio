@@ -1,0 +1,685 @@
+/* Muhammad Safdar Portfolio - Black & Dark Navy Blue Theme */
+
+/* Font Family */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Enhanced Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 100px;
+}
+
+* {
+    scroll-behavior: unset;
+}
+
+/* Custom Scrollbar - Navy Blue */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #1e3a8a;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #1e40af;
+}
+
+/* BLACK & DARK NAVY BLUE COLOR SYSTEM */
+:root {
+    /* Background Colors - Black & Navy */
+    --main-bg: #000000;           /* Pure black main background */
+    --card-bg: #0f0f23;           /* Very dark navy for cards */
+    --elevated-card: #1e1e3f;     /* Elevated dark navy cards */
+    
+    /* Border Colors - Navy Variants */
+    --subtle-border: #1e3a8a;     /* Navy blue borders */
+    --hover-border: #2563eb;      /* Brighter navy on hover */
+    
+    /* Text Colors - High Contrast */
+    --text-primary: #FFFFFF;      /* Pure white text */
+    --text-secondary: #e2e8f0;    /* Light gray text */
+    --text-muted: #94a3b8;        /* Muted gray text */
+    --text-disabled: #64748b;     /* Disabled text */
+    
+    /* Accent Colors - Navy & Blue Theme */
+    --navy-primary: #1e3a8a;      /* Primary navy blue */
+    --navy-hover: #1e40af;        /* Navy hover state */
+    --blue-accent: #3b82f6;       /* Bright blue accent */
+    --cyan-accent: #06b6d4;       /* Cyan for success */
+    --red-accent: #ef4444;        /* Red for urgency */
+    
+    /* Shadow Colors - Deep & Navy */
+    --shadow-light: rgba(30, 58, 138, 0.1);
+    --shadow-medium: rgba(30, 58, 138, 0.2);
+    --shadow-heavy: rgba(30, 58, 138, 0.3);
+    --glow-navy: rgba(30, 58, 138, 0.4);
+}
+
+/* Base Styles with Black & Navy Theme */
+body {
+    background-color: var(--main-bg);
+    color: var(--text-primary);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+/* Ensure text is always visible */
+* {
+    color: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--text-primary) !important;
+    font-weight: 700;
+}
+
+p {
+    color: var(--text-secondary) !important;
+}
+
+/* Header Styles */
+header {
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    background: rgba(0, 0, 0, 0.95);
+    transition: all 0.3s ease;
+    border-bottom: 1px solid transparent;
+}
+
+header.scrolled {
+    background: rgba(0, 0, 0, 0.98);
+    border-bottom-color: var(--subtle-border);
+    box-shadow: 0 2px 20px var(--shadow-medium);
+}
+
+/* Navigation Links */
+nav a {
+    position: relative;
+    transition: color 0.3s ease;
+    color: var(--text-secondary);
+}
+
+nav a:hover {
+    color: var(--text-primary);
+}
+
+nav a:not(.bg-navy-primary)::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--navy-primary);
+    transition: width 0.3s ease;
+}
+
+nav a:not(.bg-navy-primary):hover::after {
+    width: 100%;
+}
+
+/* Button Styles - Navy Theme */
+.bg-navy-primary,
+.btn-navy {
+    background-color: var(--navy-primary) !important;
+    color: var(--text-primary) !important;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    border: none;
+    box-shadow: 0 4px 15px rgba(30, 58, 138, 0.3);
+}
+
+.bg-navy-primary::before,
+.btn-navy::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.bg-navy-primary:hover,
+.btn-navy:hover {
+    background-color: var(--navy-hover) !important;
+    transform: translateY(-1px);
+    box-shadow: 0 8px 25px rgba(30, 58, 138, 0.5);
+}
+
+.bg-navy-primary:hover::before,
+.btn-navy:hover::before {
+    left: 100%;
+}
+
+/* Blue Accent Button */
+.bg-blue-accent {
+    background-color: var(--blue-accent) !important;
+    color: var(--text-primary) !important;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.bg-blue-accent:hover {
+    background-color: #2563eb !important;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.5);
+}
+
+/* Cyan Button for Success Actions */
+.bg-cyan-accent {
+    background-color: var(--cyan-accent) !important;
+    color: var(--text-primary) !important;
+    box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
+}
+
+.bg-cyan-accent:hover {
+    background-color: #0891b2 !important;
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.5);
+}
+
+/* Card Styles - Dark Navy Theme */
+.bg-dark-card {
+    background-color: var(--card-bg) !important;
+    border: 1px solid var(--subtle-border);
+    transition: all 0.4s ease;
+    position: relative;
+    box-shadow: 0 2px 10px var(--shadow-light);
+}
+
+.bg-dark-card:hover {
+    background-color: var(--elevated-card) !important;
+    border-color: var(--hover-border);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px var(--shadow-heavy);
+}
+
+/* Pricing Card Specific Styles */
+.pricing-card {
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-12px) scale(1.02);
+    box-shadow: 0 25px 50px rgba(30, 58, 138, 0.2);
+}
+
+/* Most Popular Badge - Navy Theme */
+.most-popular-badge {
+    background: var(--navy-primary) !important;
+    color: var(--text-primary) !important;
+    animation: subtle-pulse 2s ease-in-out infinite;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@keyframes subtle-pulse {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.02);
+        opacity: 0.9;
+    }
+}
+
+/* Text Color Classes - Navy Theme */
+.text-white {
+    color: var(--text-primary) !important;
+}
+
+.text-text-secondary {
+    color: var(--text-secondary) !important;
+}
+
+.text-text-muted {
+    color: var(--text-muted) !important;
+}
+
+.text-navy-primary {
+    color: var(--navy-primary) !important;
+}
+
+.text-blue-accent {
+    color: var(--blue-accent) !important;
+}
+
+.text-cyan-accent {
+    color: var(--cyan-accent) !important;
+}
+
+.text-red-accent {
+    color: var(--red-accent) !important;
+}
+
+/* Ensure all text elements have proper colors */
+h1 {
+    color: var(--text-primary) !important;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+h2 {
+    color: var(--text-primary) !important;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+h3 {
+    color: var(--text-primary) !important;
+    font-size: clamp(1.25rem, 3vw, 1.5rem);
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+p, span, div {
+    color: var(--text-secondary) !important;
+}
+
+/* Links - Navy Theme */
+a {
+    color: var(--navy-primary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--navy-hover);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    transition: all 0.4s ease;
+    position: relative;
+    background-color: var(--card-bg) !important;
+}
+
+.testimonial-card::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, var(--navy-primary), var(--blue-accent), var(--cyan-accent));
+    border-radius: 18px;
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+}
+
+.testimonial-card:hover::after {
+    opacity: 0.3;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-6px);
+}
+
+/* Portfolio Project Cards */
+.portfolio-project {
+    transition: all 0.4s ease;
+}
+
+.portfolio-project:hover {
+    transform: scale(1.02);
+}
+
+.portfolio-image-placeholder {
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.2), rgba(59, 130, 246, 0.2));
+    border: 1px solid var(--subtle-border);
+    transition: all 0.4s ease;
+}
+
+.portfolio-image-placeholder:hover {
+    border-color: var(--hover-border);
+    background: linear-gradient(135deg, rgba(30, 58, 138, 0.3), rgba(59, 130, 246, 0.3));
+}
+
+/* Process Steps */
+.process-step {
+    transition: all 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateX(10px);
+}
+
+.step-number {
+    background-color: var(--navy-primary) !important;
+    color: var(--text-primary) !important;
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+
+.process-step:hover .step-number {
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px var(--glow-navy);
+}
+
+/* Enhanced Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Intersection Observer Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(40px);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.scale-in {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Stagger Animation */
+.stagger-animation > * {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: staggerFadeInUp 0.8s ease forwards;
+}
+
+.stagger-animation > *:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.stagger-animation > *:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.stagger-animation > *:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes staggerFadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mobile Menu Animation */
+#mobile-menu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: var(--main-bg);
+    border-top: 1px solid var(--subtle-border);
+}
+
+#mobile-menu.show {
+    max-height: 400px;
+}
+
+/* Enhanced Focus States */
+a:focus-visible,
+button:focus-visible {
+    outline: 2px solid var(--navy-primary);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Ripple Effect */
+@keyframes ripple {
+    to {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+/* Badge Styles - Navy Theme */
+.badge {
+    background-color: rgba(30, 58, 138, 0.2);
+    color: var(--navy-primary) !important;
+    border: 1px solid rgba(30, 58, 138, 0.3);
+    font-size: 12px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Quote Icons */
+.fas.fa-quote-left {
+    color: var(--subtle-border) !important;
+    opacity: 0.5;
+}
+
+/* Check Icons */
+.fas.fa-check {
+    color: var(--cyan-accent) !important;
+}
+
+/* Code/Tech Icons */
+.fas.fa-code,
+.fas.fa-database,
+.fas.fa-server,
+.fas.fa-cloud {
+    color: var(--blue-accent) !important;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+    
+    .bg-dark-card:hover {
+        transform: translateY(-4px);
+    }
+    
+    .pricing-card:hover {
+        transform: translateY(-6px);
+    }
+    
+    .process-step:hover {
+        transform: none;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero-title {
+        font-size: 2rem;
+    }
+    
+    .container {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Performance Optimizations */
+.bg-dark-card,
+.pricing-card,
+.testimonial-card,
+.portfolio-project {
+    will-change: transform;
+}
+
+/* Dark Theme Utilities */
+.bg-dark-bg {
+    background-color: var(--main-bg) !important;
+}
+
+.border-dark-border {
+    border-color: var(--subtle-border) !important;
+}
+
+/* Text Shadow for Better Readability */
+.text-shadow {
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Ensure all interactive elements are properly colored */
+button {
+    color: var(--text-primary) !important;
+}
+
+input, textarea {
+    background-color: var(--card-bg);
+    border: 1px solid var(--subtle-border);
+    color: var(--text-primary);
+}
+
+input:focus, textarea:focus {
+    border-color: var(--navy-primary);
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(30, 58, 138, 0.2);
+}
+
+/* Urgency Text */
+.urgency-text {
+    color: var(--red-accent) !important;
+    font-weight: 600;
+}
+
+/* Success Text */
+.success-text {
+    color: var(--cyan-accent) !important;
+}
+
+/* Prevent text from disappearing */
+.container * {
+    opacity: 1 !important;
+}
+
+/* Hero Section Background - Navy Gradient */
+.hero-section {
+    background: radial-gradient(ellipse at center, rgba(30, 58, 138, 0.1) 0%, transparent 70%);
+}
+
+/* Footer Styles */
+footer {
+    background-color: var(--card-bg) !important;
+    border-top: 1px solid var(--subtle-border);
+}
+
+/* Loading States */
+.loading-spinner {
+    width: 40px;
+    height: 40px;
+    border: 4px solid rgba(30, 58, 138, 0.3);
+    border-left: 4px solid var(--navy-primary);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Tech Stack Highlights */
+.tech-highlight {
+    background: linear-gradient(135deg, var(--navy-primary), var(--blue-accent));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 600;
+}
+
+/* Special Navy Glow for Important Elements */
+.navy-glow {
+    box-shadow: 0 0 20px var(--glow-navy);
+}
+
+.navy-glow:hover {
+    box-shadow: 0 0 30px var(--glow-navy);
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .bg-dark-card {
+        background: white !important;
+        border: 1px solid #ccc !important;
+    }
+}
