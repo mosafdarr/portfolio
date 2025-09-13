@@ -1,1722 +1,590 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Muhammad Safdar - Elite Backend Engineer & AI Innovator</title>
-    <meta name="description" content="Product-minded Backend/Platform engineer specializing in AI/RAG features, scalable systems, and data engineering solutions. Reduced RAG latency by 65%, built 370+ scrapers.">
-    <meta name="author" content="Muhammad Safdar">
-    <meta name="keywords" content="Backend Engineer, AI Developer, RAG Systems, Platform Engineering, Python, FastAPI, Data Engineering">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Muhammad Safdar - Elite Backend Engineer & AI Innovator">
-    <meta property="og:description" content="Product-minded Backend/Platform engineer specializing in AI/RAG features and scalable systems">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://mosafdar.com">
-    
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Muhammad Safdar - Elite Backend Engineer & AI Innovator">
-    <meta name="twitter:description" content="Product-minded Backend/Platform engineer specializing in AI/RAG features and scalable systems">
-    
-    <!-- External Libraries -->
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Muhammad Safdar",
-        "jobTitle": "Backend Engineer & AI Developer",
-        "description": "Product-minded Backend/Platform engineer specializing in AI/RAG features and scalable systems",
-        "url": "https://mosafdar.com",
-        "sameAs": [
-            "https://linkedin.com/in/mosafdar",
-            "https://github.com/mosafdarr"
-        ],
-        "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Lahore",
-            "addressCountry": "Pakistan"
-        },
-        "telephone": "+92 308 1120027",
-        "email": "safdar@mosafdar.com"
-    }
-    </script>
+  <title>Sonu Sourav</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <style>
-        :root {
-            --primary: #3b82f6;
-            --primary-dark: #1e40af;
-            --accent: #06d6a0;
-            --text-primary: #1f2937;
-            --text-secondary: #6b7280;
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8fafc;
-            --border: #e5e7eb;
-            --shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-            --shadow-lg: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
-        }
+  <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet" />
 
-        [data-theme="dark"] {
-            --text-primary: #f9fafb;
-            --text-secondary: #d1d5db;
-            --bg-primary: #111827;
-            --bg-secondary: #1f2937;
-            --border: #374151;
-        }
+  <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css" />
+  <link rel="stylesheet" href="css/animate.css" />
 
-        * {
-            font-family: 'Inter', sans-serif;
-        }
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/owl.theme.default.min.css" />
+  <link rel="stylesheet" href="css/magnific-popup.css" />
 
-        .font-mono {
-            font-family: 'JetBrains Mono', monospace;
-        }
+  <link rel="stylesheet" href="css/aos.css" />
 
-        body {
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            transition: all 0.3s ease;
-        }
+  <link rel="stylesheet" href="css/ionicons.min.css" />
 
-        .gradient-bg {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
-        }
+  <link rel="stylesheet" href="css/flaticon.css" />
+  <link rel="stylesheet" href="css/icomoon.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/switch.css" />
 
-        .glass {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        }
-
-        .card-hover {
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .animate-float {
-            animation: float 6s ease-in-out infinite;
-        }
-
-        @keyframes float {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-20px); }
-        }
-
-        .animate-glow {
-            animation: glow 2s ease-in-out infinite alternate;
-        }
-
-        @keyframes glow {
-            from { box-shadow: 0 0 20px var(--accent); }
-            to { box-shadow: 0 0 30px var(--accent), 0 0 40px var(--accent); }
-        }
-
-        .skill-bar {
-            transition: width 2s ease-in-out;
-            width: 0%;
-        }
-
-        .skill-bar.animate {
-            width: var(--skill-width);
-        }
-
-        .modal {
-            backdrop-filter: blur(10px);
-            background: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content {
-            background: var(--bg-primary);
-            border: 1px solid var(--border);
-            box-shadow: var(--shadow-lg);
-        }
-
-        .code-block {
-            background: #1e293b;
-            color: #e2e8f0;
-            border-radius: 8px;
-            padding: 1rem;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.875rem;
-            line-height: 1.5;
-            overflow-x: auto;
-        }
-
-        .typing-animation {
-            border-right: 2px solid var(--accent);
-            animation: blink 1s infinite;
-        }
-
-        @keyframes blink {
-            0%, 50% { border-color: var(--accent); }
-            51%, 100% { border-color: transparent; }
-        }
-
-        .problem-card {
-            position: relative;
-            overflow: hidden;
-        }
-
-        .problem-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.5s;
-        }
-
-        .problem-card:hover::before {
-            left: 100%;
-        }
-
-        @media print {
-            body { 
-                background: white !important; 
-                color: black !important;
-                font-size: 12px;
-            }
-            .no-print { display: none !important; }
-            .card-hover { transform: none !important; }
-            .animate-float { animation: none !important; }
-        }
-
-        .tech-badge {
-            background: linear-gradient(135deg, var(--primary), var(--accent));
-            color: white;
-            padding: 0.25rem 0.75rem;
-            border-radius: 9999px;
-            font-size: 0.75rem;
-            font-weight: 500;
-        }
-
-        .metric-card {
-            background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(6, 214, 160, 0.1));
-            border: 1px solid rgba(59, 130, 246, 0.2);
-        }
-
-        .testimonial-card {
-            background: var(--bg-secondary);
-            border-left: 4px solid var(--accent);
-        }
-    </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
 </head>
-<body>
-    <!-- Skip to content for accessibility -->
-    <a href="#main" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-blue-600 text-white px-3 py-2 rounded">Skip to content</a>
 
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full bg-white/80 dark:bg-gray-900/80 backdrop-blur-md z-50 border-b border-gray-200 dark:border-gray-700 no-print">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="font-bold text-xl">
-                    <span class="bg-clip-text">MOSAFDAR</span>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a href="#hero" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Home</a>
-                    <a href="#highlights" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Highlights</a>
-                    <a href="#cases" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Case Studies</a>
-                    <a href="#problems" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Problems I Solve</a>
-                    <a href="#projects" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Projects</a>
-                    <a href="#skills" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Skills</a>
-                    <a href="#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors">Contact</a>
-                </div>
-                <button id="theme-toggle" class="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors">
-                    <i class="fas fa-moon dark:hidden"></i>
-                    <i class="fas fa-sun hidden dark:inline"></i>
-                </button>
-            </div>
-        </div>
-    </nav>
-
-    <main id="main">
-        <!-- Hero Section -->
-        <section id="hero" class="min-h-screen flex items-center justify-center relative overflow-hidden pt-16">
-            <div class="absolute inset-0 gradient-bg opacity-10"></div>
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div class="text-center">
-                    <div class="animate-float mb-8">
-                        <div class="w-32 h-32 mx-auto bg-gradient-to-r from-blue-500 to-green-400 rounded-full flex items-center justify-center text-white text-4xl font-bold animate-glow">
-                            MS
-                        </div>
-                    </div>
-                    <h1 class="text-5xl md:text-7xl font-bold mb-6">
-                        Muhammad <span class="bg-clip-text">Safdar</span>
-                    </h1>
-                    <h2 class="text-2xl md:text-3xl font-light text-gray-600 dark:text-gray-300 mb-6">
-                        Backend Engineer & <span class="typing-animation">AI Innovator</span>
-                    </h2>
-                    <p class="text-xl md:text-2xl text-gray-700 dark:text-gray-300 mb-12 max-w-4xl mx-auto leading-relaxed">
-                        I architect scalable backend systems and ship production-ready AI features that drive business growth. 
-                        <span class="font-semibold text-green-600">65% faster RAG systems</span>, 
-                        <span class="font-semibold text-blue-600">370+ data scrapers</span>, and 
-                        <span class="font-semibold text-purple-600">enterprise-grade APIs</span> that power millions of requests.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                        <a href="#contact" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all transform hover:scale-105 animate-glow">
-                            <i class="fas fa-rocket mr-2"></i>Hire Me
-                        </a>
-                        <a href="mailto:safdar@mosafdar.com" class="border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white px-8 py-4 rounded-full font-semibold text-lg transition-all">
-                            <i class="fas fa-file-download mr-2"></i>View Resume
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Floating elements -->
-            <div class="absolute top-20 left-10 w-20 h-20 bg-blue-500/20 rounded-full animate-float"></div>
-            <div class="absolute bottom-20 right-10 w-16 h-16 bg-green-500/20 rounded-full animate-float" style="animation-delay: -2s;"></div>
-            <div class="absolute top-1/2 left-20 w-12 h-12 bg-purple-500/20 rounded-full animate-float" style="animation-delay: -4s;"></div>
-        </section>
-
-        <!-- Highlights Section -->
-        <section id="highlights" class="py-20 bg-gray-50 dark:bg-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Impact Highlights</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        Measurable results that drive business success
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="metric-card p-8 rounded-2xl card-hover">
-                        <div class="text-4xl mb-4">⚡</div>
-                        <h3 class="text-2xl font-bold mb-2">65% Faster</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">RAG system latency reduction through optimized embeddings and caching strategies</p>
-                        <div class="tech-badge">Performance</div>
-                    </div>
-
-                    <div class="metric-card p-8 rounded-2xl card-hover">
-                        <div class="text-4xl mb-4">🕷️</div>
-                        <h3 class="text-2xl font-bold mb-2">370+ Scrapers</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Production web scrapers handling millions of data points with 99.9% uptime</p>
-                        <div class="tech-badge">Scale</div>
-                    </div>
-
-                    <div class="metric-card p-8 rounded-2xl card-hover">
-                        <div class="text-4xl mb-4">🔧</div>
-                        <h3 class="text-2xl font-bold mb-2">300+ Pipelines</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">ETL/ELT data pipelines processing terabytes of data daily</p>
-                        <div class="tech-badge">Data Engineering</div>
-                    </div>
-
-                    <div class="metric-card p-8 rounded-2xl card-hover">
-                        <div class="text-4xl mb-4">🏎️</div>
-                        <h3 class="text-2xl font-bold mb-2">BMW & Porsche</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Enterprise APIs powering automotive platforms with sub-100ms response times</p>
-                        <div class="tech-badge">Enterprise</div>
-                    </div>
-
-                    <div class="metric-card p-8 rounded-2xl card-hover">
-                        <div class="text-4xl mb-4">✅</div>
-                        <h3 class="text-2xl font-bold mb-2">84.5% Coverage</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">Test coverage across microservices ensuring production reliability</p>
-                        <div class="tech-badge">Quality</div>
-                    </div>
-
-                    <div class="metric-card p-8 rounded-2xl card-hover">
-                        <div class="text-4xl mb-4">📈</div>
-                        <h3 class="text-2xl font-bold mb-2">20% Engagement</h3>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">User engagement increase through AI-powered recommendation systems</p>
-                        <div class="tech-badge">AI/ML</div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Case Studies Section -->
-        <section id="cases" class="py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Case Studies</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        Real-world solutions that transformed businesses
-                    </p>
-                </div>
-
-                <div class="space-y-12">
-                    <!-- Conovo RAG Platform -->
-                    <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 md:p-12 shadow-xl card-hover">
-                        <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div>
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mr-4">
-                                        <i class="fas fa-brain text-blue-600 text-xl"></i>
-                                    </div>
-                                    <h3 class="text-2xl md:text-3xl font-bold">Conovo RAG Platform</h3>
-                                </div>
-                                <div class="mb-6">
-                                    <h4 class="font-semibold text-red-600 mb-2">Problem</h4>
-                                    <p class="text-gray-600 dark:text-gray-300">Enterprise needed intelligent document processing with sub-second response times for customer queries across massive document repositories.</p>
-                                </div>
-                                <div class="mb-6">
-                                    <h4 class="font-semibold text-blue-600 mb-2">Solution</h4>
-                                    <p class="text-gray-600 dark:text-gray-300">Built production RAG system with vector databases, optimized embeddings, and intelligent caching layer.</p>
-                                </div>
-                                <div class="mb-6">
-                                    <h4 class="font-semibold text-green-600 mb-2">Result</h4>
-                                    <p class="text-gray-600 dark:text-gray-300">65% latency reduction, 10x document processing speed, 95% accuracy in responses.</p>
-                                </div>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="tech-badge">Python</span>
-                                    <span class="tech-badge">FastAPI</span>
-                                    <span class="tech-badge">Pinecone</span>
-                                    <span class="tech-badge">OpenAI</span>
-                                    <span class="tech-badge">Redis</span>
-                                </div>
-                            </div>
-                            <div class="bg-gray-100 dark:bg-gray-700 rounded-2xl p-6">
-                                <div class="code-block">
-<pre><code># RAG Pipeline Architecture
-class RAGPipeline:
-    def __init__(self):
-        self.vector_db = PineconeClient()
-        self.embedder = OpenAIEmbeddings()
-        self.cache = RedisCache()
-    
-    async def query(self, text: str):
-        # Check cache first
-        cached = await self.cache.get(text)
-        if cached:
-            return cached
-            
-        # Generate embeddings
-        embedding = self.embedder.embed(text)
-        
-        # Vector similarity search
-        docs = self.vector_db.query(
-            embedding, top_k=5
-        )
-        
-        # Generate response
-        response = await self.llm.generate(
-            context=docs, query=text
-        )
-        
-        # Cache for future queries
-        await self.cache.set(text, response)
-        return response</code></pre>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- NETSOL Hubex APIs -->
-                    <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 md:p-12 shadow-xl card-hover">
-                        <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div class="bg-gray-100 dark:bg-gray-700 rounded-2xl p-6">
-                                <div class="space-y-4">
-                                    <div class="flex items-center justify-between p-4 bg-green-100 dark:bg-green-900 rounded-lg">
-                                        <span class="font-semibold">API Response Time</span>
-                                        <span class="text-green-600 font-bold">&lt; 100ms</span>
-                                    </div>
-                                    <div class="flex items-center justify-between p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                                        <span class="font-semibold">Throughput</span>
-                                        <span class="text-blue-600 font-bold">10K+ RPS</span>
-                                    </div>
-                                    <div class="flex items-center justify-between p-4 bg-purple-100 dark:bg-purple-900 rounded-lg">
-                                        <span class="font-semibold">Uptime</span>
-                                        <span class="text-purple-600 font-bold">99.99%</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mr-4">
-                                        <i class="fas fa-car text-green-600 text-xl"></i>
-                                    </div>
-                                    <h3 class="text-2xl md:text-3xl font-bold">NETSOL Hubex APIs</h3>
-                                </div>
-                                <div class="mb-6">
-                                    <h4 class="font-semibold text-red-600 mb-2">Problem</h4>
-                                    <p class="text-gray-600 dark:text-gray-300">Automotive platform needed high-performance APIs to handle BMW and Porsche integration with millions of daily requests.</p>
-                                </div>
-                                <div class="mb-6">
-                                    <h4 class="font-semibold text-blue-600 mb-2">Solution</h4>
-                                    <p class="text-gray-600 dark:text-gray-300">Designed microservices architecture with intelligent caching, load balancing, and real-time monitoring.</p>
-                                </div>
-                                <div class="mb-6">
-                                    <h4 class="font-semibold text-green-600 mb-2">Result</h4>
-                                    <p class="text-gray-600 dark:text-gray-300">Sub-100ms response times, 99.99% uptime, seamless BMW/Porsche integration handling 10K+ RPS.</p>
-                                </div>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="tech-badge">Node.js</span>
-                                    <span class="tech-badge">Express</span>
-                                    <span class="tech-badge">MongoDB</span>
-                                    <span class="tech-badge">Redis</span>
-                                    <span class="tech-badge">Docker</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Bringer MYAIO -->
-                    <div class="bg-white dark:bg-gray-800 rounded-3xl p-8 md:p-12 shadow-xl card-hover">
-                        <div class="grid md:grid-cols-2 gap-8 items-center">
-                            <div>
-                                <div class="flex items-center mb-4">
-                                    <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mr-4">
-                                        <i class="fas fa-robot text-purple-600 text-xl"></i>
-                                    </div>
-                                    <h3 class="text-2xl md:text-3xl font-bold">Bringer MYAIO</h3>
-                                </div>
-                                <div class="mb-6">
-                                    <h4 class="font-semibold text-red-600 mb-2">Problem</h4>
-                                    <p class="text-gray-600 dark:text-gray-300">E-commerce automation needed intelligent bot system for inventory tracking, price monitoring, and purchase automation across multiple platforms.</p>
-                                </div>
-                                <div class="mb-6">
-                                    <h4 class="font-semibold text-blue-600 mb-2">Solution</h4>
-                                    <p class="text-gray-600 dark:text-gray-300">Built AI-powered automation platform with ML-driven decision making, real-time data processing, and smart notification system.</p>
-                                </div>
-                                <div class="mb-6">
-                                    <h4 class="font-semibold text-green-600 mb-2">Result</h4>
-                                    <p class="text-gray-600 dark:text-gray-300">95% automation success rate, 80% faster purchase decisions, 300% ROI improvement for power users.</p>
-                                </div>
-                                <div class="flex flex-wrap gap-2">
-                                    <span class="tech-badge">Python</span>
-                                    <span class="tech-badge">Selenium</span>
-                                    <span class="tech-badge">TensorFlow</span>
-                                    <span class="tech-badge">WebSocket</span>
-                                    <span class="tech-badge">PostgreSQL</span>
-                                </div>
-                            </div>
-                            <div class="bg-gray-100 dark:bg-gray-700 rounded-2xl p-6">
-                                <div class="space-y-4">
-                                    <div class="p-4 bg-blue-50 dark:bg-blue-900 rounded-lg border-l-4 border-blue-500">
-                                        <div class="flex items-center mb-2">
-                                            <i class="fas fa-chart-line text-blue-600 mr-2"></i>
-                                            <span class="font-semibold">ML Price Prediction</span>
-                                        </div>
-                                        <p class="text-sm text-gray-600 dark:text-gray-300">97% accuracy predicting optimal purchase timing</p>
-                                    </div>
-                                    <div class="p-4 bg-green-50 dark:bg-green-900 rounded-lg border-l-4 border-green-500">
-                                        <div class="flex items-center mb-2">
-                                            <i class="fas fa-lightning-bolt text-green-600 mr-2"></i>
-                                            <span class="font-semibold">Real-time Processing</span>
-                                        </div>
-                                        <p class="text-sm text-gray-600 dark:text-gray-300">Sub-second inventory updates across 50+ sites</p>
-                                    </div>
-                                    <div class="p-4 bg-purple-50 dark:bg-purple-900 rounded-lg border-l-4 border-purple-500">
-                                        <div class="flex items-center mb-2">
-                                            <i class="fas fa-shield-alt text-purple-600 mr-2"></i>
-                                            <span class="font-semibold">Anti-Detection</span>
-                                        </div>
-                                        <p class="text-sm text-gray-600 dark:text-gray-300">Advanced bot detection bypass with 99.8% success</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Problems I Solve Section -->
-        <section id="problems" class="py-20 bg-gray-50 dark:bg-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Problems I Solve</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        Technical challenges I tackle daily to drive business success
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Problem 1: Scaling Web Scrapers -->
-                    <div class="problem-card bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover cursor-pointer" onclick="openModal('scraper-modal')">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-red-100 dark:bg-red-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-spider text-red-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Scaling Web Scrapers</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Building resilient scraping infrastructure that handles millions of requests while avoiding detection and maintaining data quality.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-xs bg-red-100 dark:bg-red-900 text-red-600 px-2 py-1 rounded">Python</span>
-                                <span class="text-xs bg-red-100 dark:bg-red-900 text-red-600 px-2 py-1 rounded">Scrapy</span>
-                            </div>
-                            <button class="text-blue-600 hover:text-blue-800 font-semibold">
-                                Quick View <i class="fas fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Problem 2: Production RAG Systems -->
-                    <div class="problem-card bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover cursor-pointer" onclick="openModal('rag-modal')">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-brain text-blue-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Production RAG Systems</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Optimizing Retrieval-Augmented Generation systems for enterprise scale with sub-second response times and high accuracy.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-600 px-2 py-1 rounded">LangChain</span>
-                                <span class="text-xs bg-blue-100 dark:bg-blue-900 text-blue-600 px-2 py-1 rounded">Pinecone</span>
-                            </div>
-                            <button class="text-blue-600 hover:text-blue-800 font-semibold">
-                                Quick View <i class="fas fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Problem 3: Lambda CI/CD -->
-                    <div class="problem-card bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover cursor-pointer" onclick="openModal('lambda-modal')">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-rocket text-green-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Lambda CI/CD</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Automating serverless deployments with zero-downtime updates, automated testing, and cost optimization strategies.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-xs bg-green-100 dark:bg-green-900 text-green-600 px-2 py-1 rounded">AWS</span>
-                                <span class="text-xs bg-green-100 dark:bg-green-900 text-green-600 px-2 py-1 rounded">GitHub Actions</span>
-                            </div>
-                            <button class="text-blue-600 hover:text-blue-800 font-semibold">
-                                Quick View <i class="fas fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Problem 4: ETL Reliability -->
-                    <div class="problem-card bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover cursor-pointer" onclick="openModal('etl-modal')">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-database text-purple-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">ETL Reliability</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Building fault-tolerant data pipelines with automated recovery, data quality checks, and performance monitoring.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-600 px-2 py-1 rounded">Apache Airflow</span>
-                                <span class="text-xs bg-purple-100 dark:bg-purple-900 text-purple-600 px-2 py-1 rounded">dbt</span>
-                            </div>
-                            <button class="text-blue-600 hover:text-blue-800 font-semibold">
-                                Quick View <i class="fas fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Problem 5: Cost Optimization -->
-                    <div class="problem-card bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover cursor-pointer" onclick="openModal('cost-modal')">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-dollar-sign text-orange-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Cost Optimization</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Reducing cloud infrastructure costs by 40-60% through intelligent resource allocation and usage optimization.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-xs bg-orange-100 dark:bg-orange-900 text-orange-600 px-2 py-1 rounded">AWS</span>
-                                <span class="text-xs bg-orange-100 dark:bg-orange-900 text-orange-600 px-2 py-1 rounded">Terraform</span>
-                            </div>
-                            <button class="text-blue-600 hover:text-blue-800 font-semibold">
-                                Quick View <i class="fas fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Problem 6: API Performance -->
-                    <div class="problem-card bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover cursor-pointer" onclick="openModal('api-modal')">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-indigo-100 dark:bg-indigo-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-tachometer-alt text-indigo-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">API Performance</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Optimizing API response times from seconds to milliseconds through caching, query optimization, and architecture improvements.
-                        </p>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2">
-                                <span class="text-xs bg-indigo-100 dark:bg-indigo-900 text-indigo-600 px-2 py-1 rounded">FastAPI</span>
-                                <span class="text-xs bg-indigo-100 dark:bg-indigo-900 text-indigo-600 px-2 py-1 rounded">Redis</span>
-                            </div>
-                            <button class="text-blue-600 hover:text-blue-800 font-semibold">
-                                Quick View <i class="fas fa-arrow-right ml-1"></i>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Selected Projects</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        Innovation meets execution in these technical showcases
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- TalkWithDoc -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-file-alt text-blue-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">TalkWithDoc</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            RAG-powered document Q&A system with natural language processing, supporting multiple file formats and intelligent context retrieval.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-badge">Python</span>
-                            <span class="tech-badge">LangChain</span>
-                            <span class="tech-badge">OpenAI</span>
-                            <span class="tech-badge">Streamlit</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex space-x-3">
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                                <a href="#" class="text-green-600 hover:text-green-800">
-                                    <i class="fas fa-external-link-alt"></i> Demo
-                                </a>
-                            </div>
-                            <span class="text-xs bg-blue-100 text-blue-600 px-2 py-1 rounded">Production</span>
-                        </div>
-                    </div>
-
-                    <!-- FastAPI Serverless -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-server text-green-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">FastAPI Serverless</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            High-performance serverless API framework with auto-scaling, monitoring, and deployment automation for enterprise workloads.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-badge">FastAPI</span>
-                            <span class="tech-badge">AWS Lambda</span>
-                            <span class="tech-badge">Docker</span>
-                            <span class="tech-badge">Terraform</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex space-x-3">
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                                <a href="#" class="text-green-600 hover:text-green-800">
-                                    <i class="fas fa-external-link-alt"></i> Demo
-                                </a>
-                            </div>
-                            <span class="text-xs bg-green-100 text-green-600 px-2 py-1 rounded">Open Source</span>
-                        </div>
-                    </div>
-
-                    <!-- Quranic Search Engine -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg card-hover">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-search text-purple-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Quranic Search Engine</h3>
-                        </div>
-                        <p class="text-gray-600 dark:text-gray-300 mb-4">
-                            Semantic search engine for religious texts with multilingual support, contextual understanding, and advanced filtering capabilities.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-4">
-                            <span class="tech-badge">Elasticsearch</span>
-                            <span class="tech-badge">NLP</span>
-                            <span class="tech-badge">React</span>
-                            <span class="tech-badge">Node.js</span>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex space-x-3">
-                                <a href="#" class="text-blue-600 hover:text-blue-800">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                                <a href="#" class="text-green-600 hover:text-green-800">
-                                    <i class="fas fa-external-link-alt"></i> Demo
-                                </a>
-                            </div>
-                            <span class="text-xs bg-orange-100 text-orange-600 px-2 py-1 rounded">In Progress</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 bg-gray-50 dark:bg-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Technical Expertise</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        Full-stack capabilities with deep backend specialization
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Backend Development -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-server text-blue-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Backend</h3>
-                        </div>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">Python</span>
-                                    <span class="text-sm text-gray-500">95%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-blue-600 rounded-full h-2" style="--skill-width: 95%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">FastAPI</span>
-                                    <span class="text-sm text-gray-500">90%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-blue-600 rounded-full h-2" style="--skill-width: 90%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">Node.js</span>
-                                    <span class="text-sm text-gray-500">85%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-blue-600 rounded-full h-2" style="--skill-width: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Data Engineering -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-database text-green-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Data Eng</h3>
-                        </div>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">Apache Airflow</span>
-                                    <span class="text-sm text-gray-500">88%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-green-600 rounded-full h-2" style="--skill-width: 88%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">Pandas/NumPy</span>
-                                    <span class="text-sm text-gray-500">92%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-green-600 rounded-full h-2" style="--skill-width: 92%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">SQL/NoSQL</span>
-                                    <span class="text-sm text-gray-500">90%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-green-600 rounded-full h-2" style="--skill-width: 90%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Cloud/DevOps -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-cloud text-purple-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">Cloud/DevOps</h3>
-                        </div>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">AWS</span>
-                                    <span class="text-sm text-gray-500">87%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-purple-600 rounded-full h-2" style="--skill-width: 87%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">Docker</span>
-                                    <span class="text-sm text-gray-500">85%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-purple-600 rounded-full h-2" style="--skill-width: 85%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">Terraform</span>
-                                    <span class="text-sm text-gray-500">80%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-purple-600 rounded-full h-2" style="--skill-width: 80%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AI/ML Tools -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-6 shadow-lg">
-                        <div class="flex items-center mb-6">
-                            <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-brain text-orange-600 text-xl"></i>
-                            </div>
-                            <h3 class="text-xl font-bold">AI/ML</h3>
-                        </div>
-                        <div class="space-y-4">
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">LangChain</span>
-                                    <span class="text-sm text-gray-500">92%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-orange-600 rounded-full h-2" style="--skill-width: 92%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">OpenAI API</span>
-                                    <span class="text-sm text-gray-500">88%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-orange-600 rounded-full h-2" style="--skill-width: 88%"></div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="flex justify-between mb-2">
-                                    <span class="font-medium">Vector DBs</span>
-                                    <span class="text-sm text-gray-500">85%</span>
-                                </div>
-                                <div class="bg-gray-200 dark:bg-gray-700 rounded-full h-2">
-                                    <div class="skill-bar bg-orange-600 rounded-full h-2" style="--skill-width: 85%"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonials Section -->
-        <section id="testimonials" class="py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Client Testimonials</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        What industry leaders say about working with me
-                    </p>
-                </div>
-
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="testimonial-card p-6 rounded-2xl">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-full mr-4"></div>
-                            <div>
-                                <h4 class="font-bold">Sarah Johnson</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">CTO, TechCorp</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 dark:text-gray-300 italic">
-                            "Muhammad delivered a RAG system that exceeded our performance expectations. 65% latency reduction was game-changing for our customer experience."
-                        </p>
-                        <div class="flex mt-4">
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card p-6 rounded-2xl">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-full mr-4"></div>
-                            <div>
-                                <h4 class="font-bold">Michael Chen</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Engineering Manager, AutoTech</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 dark:text-gray-300 italic">
-                            "The BMW and Porsche API integrations were flawless. Sub-100ms response times at enterprise scale - exactly what we needed."
-                        </p>
-                        <div class="flex mt-4">
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                        </div>
-                    </div>
-
-                    <div class="testimonial-card p-6 rounded-2xl">
-                        <div class="flex items-center mb-4">
-                            <div class="w-12 h-12 bg-gray-300 dark:bg-gray-600 rounded-full mr-4"></div>
-                            <div>
-                                <h4 class="font-bold">Emily Rodriguez</h4>
-                                <p class="text-sm text-gray-600 dark:text-gray-400">Product Director, DataFlow</p>
-                            </div>
-                        </div>
-                        <p class="text-gray-700 dark:text-gray-300 italic">
-                            "Muhammad's data pipeline expertise saved us months of development time. 300+ pipelines running smoothly with exceptional reliability."
-                        </p>
-                        <div class="flex mt-4">
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                            <i class="fas fa-star text-yellow-500"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 bg-gray-50 dark:bg-gray-800">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's Build Something Amazing</h2>
-                    <p class="text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
-                        Ready to scale your backend systems and ship AI features that drive growth?
-                    </p>
-                </div>
-
-                <div class="grid lg:grid-cols-2 gap-12">
-                    <!-- Contact Info -->
-                    <div>
-                        <h3 class="text-2xl font-bold mb-8">Get In Touch</h3>
-                        <div class="space-y-6">
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mr-4">
-                                    <i class="fas fa-envelope text-blue-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Primary Email</p>
-                                    <a href="mailto:safdar@mosafdar.com" class="text-blue-600 hover:text-blue-800">safdar@mosafdar.com</a>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mr-4">
-                                    <i class="fas fa-envelope text-green-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Alternative Email</p>
-                                    <a href="mailto:mosafdaralii@gmail.com" class="text-green-600 hover:text-green-800">mosafdaralii@gmail.com</a>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mr-4">
-                                    <i class="fas fa-phone text-purple-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Phone</p>
-                                    <a href="tel:+923081120027" class="text-purple-600 hover:text-purple-800">+92 308 1120027</a>
-                                </div>
-                            </div>
-
-                            <div class="flex items-center">
-                                <div class="w-12 h-12 bg-orange-100 dark:bg-orange-900 rounded-xl flex items-center justify-center mr-4">
-                                    <i class="fas fa-map-marker-alt text-orange-600 text-xl"></i>
-                                </div>
-                                <div>
-                                    <p class="font-semibold">Location</p>
-                                    <p class="text-gray-600 dark:text-gray-300">Lahore, Pakistan</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="mt-8">
-                            <h4 class="font-semibold mb-4">Connect With Me</h4>
-                            <div class="flex space-x-4">
-                                <a href="https://linkedin.com/in/mosafdar" target="_blank" class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center hover:bg-blue-700 transition-colors">
-                                    <i class="fab fa-linkedin text-xl"></i>
-                                </a>
-                                <a href="https://github.com/mosafdarr" target="_blank" class="w-12 h-12 bg-gray-800 text-white rounded-xl flex items-center justify-center hover:bg-gray-900 transition-colors">
-                                    <i class="fab fa-github text-xl"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Form -->
-                    <div class="bg-white dark:bg-gray-800 rounded-2xl p-8 shadow-lg">
-                        <h3 class="text-2xl font-bold mb-6">Send Message</h3>
-                        <form id="contact-form">
-                            <div class="mb-6">
-                                <label for="name" class="block text-sm font-medium mb-2">Name</label>
-                                <input type="text" id="name" name="name" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white">
-                            </div>
-                            
-                            <div class="mb-6">
-                                <label for="email" class="block text-sm font-medium mb-2">Email</label>
-                                <input type="email" id="email" name="email" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white">
-                            </div>
-                            
-                            <div class="mb-6">
-                                <label for="message" class="block text-sm font-medium mb-2">Message</label>
-                                <textarea id="message" name="message" rows="5" required class="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white"></textarea>
-                            </div>
-                            
-                            <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-colors">
-                                <i class="fas fa-paper-plane mr-2"></i>Send Message
-                            </button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12 no-print">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <div class="gradient-bg bg-clip-text text-transparent text-2xl font-bold mb-4">Muhammad Safdar</div>
-                <p class="text-gray-400 mb-6">Backend Engineer & AI Innovator</p>
-                <div class="flex justify-center space-x-6 mb-8">
-                    <a href="mailto:safdar@mosafdar.com" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fas fa-envelope text-xl"></i>
-                    </a>
-                    <a href="https://linkedin.com/in/mosafdar" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="https://github.com/mosafdarr" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                </div>
-                <p class="text-gray-500 text-sm">© 2024 Muhammad Safdar. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Problem Modals -->
-    <!-- Scraper Modal -->
-    <div id="scraper-modal" class="modal fixed inset-0 z-50 hidden">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="modal-content rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-                <div class="p-8">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="flex items-center">
-                            <div class="w-16 h-16 bg-red-100 dark:bg-red-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-spider text-red-600 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h2 class="text-3xl font-bold">Scaling Web Scrapers</h2>
-                                <p class="text-gray-600 dark:text-gray-300">Building resilient scraping infrastructure</p>
-                            </div>
-                        </div>
-                        <button onclick="closeModal('scraper-modal')" class="text-gray-500 hover:text-gray-700 text-2xl">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-xl font-bold mb-4 text-red-600">The Challenge</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-6">
-                                Most web scrapers fail at scale due to rate limiting, IP blocking, and inconsistent data quality. 
-                                Enterprise needs require 99.9% uptime with millions of requests daily across hundreds of websites.
-                            </p>
-
-                            <h3 class="text-xl font-bold mb-4 text-blue-600">My Approach</h3>
-                            <ul class="space-y-3 text-gray-700 dark:text-gray-300 mb-6">
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                                    <span><strong>Rotating proxy pools</strong> with automatic IP management</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                                    <span><strong>Intelligent retry logic</strong> with exponential backoff</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                                    <span><strong>Distributed task queues</strong> for horizontal scaling</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                                    <span><strong>Real-time monitoring</strong> and alerting systems</span>
-                                </li>
-                            </ul>
-
-                            <h3 class="text-xl font-bold mb-4 text-green-600">Results Achieved</h3>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-green-50 dark:bg-green-900 p-4 rounded-lg">
-                                    <div class="text-2xl font-bold text-green-600">370+</div>
-                                    <div class="text-sm text-gray-600 dark:text-gray-300">Active Scrapers</div>
-                                </div>
-                                <div class="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                                    <div class="text-2xl font-bold text-blue-600">99.9%</div>
-                                    <div class="text-sm text-gray-600 dark:text-gray-300">Uptime</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xl font-bold mb-4">Architecture Overview</h3>
-                            <div class="bg-gray-900 rounded-lg p-4 mb-6">
-                                <div class="code-block">
-<pre><code># Scalable Scraper Architecture
-class ScraperOrchestrator:
-    def __init__(self):
-        self.proxy_pool = ProxyRotator()
-        self.task_queue = CeleryQueue()
-        self.monitoring = PrometheusMetrics()
-        
-    async def scrape_at_scale(self, urls: List[str]):
-        # Distribute tasks across workers
-        tasks = [
-            self.task_queue.delay(
-                scrape_with_resilience, 
-                url, 
-                proxy=self.proxy_pool.get_proxy()
-            ) 
-            for url in urls
-        ]
-        
-        # Monitor and collect results
-        results = await self.collect_results(tasks)
-        self.monitoring.record_metrics(results)
-        
-        return self.process_data(results)
-
-@retry(max_attempts=3, backoff=exponential)
-async def scrape_with_resilience(url, proxy):
-    # Implement smart scraping logic
-    pass</code></pre>
-                                </div>
-                            </div>
-
-                            <h3 class="text-xl font-bold mb-4">Technology Stack</h3>
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="tech-badge">Python</span>
-                                <span class="tech-badge">Scrapy</span>
-                                <span class="tech-badge">Selenium</span>
-                                <span class="tech-badge">Celery</span>
-                                <span class="tech-badge">Redis</span>
-                                <span class="tech-badge">Prometheus</span>
-                                <span class="tech-badge">Docker</span>
-                            </div>
-
-                            <div class="flex space-x-4">
-                                <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                                    <i class="fab fa-github mr-2"></i>View Code
-                                </a>
-                                <a href="#" class="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
-                                    <i class="fas fa-external-link-alt mr-2"></i>Live Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+<body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light site-navbar-target nav-test "
+    id="ftco-navbar">
+    <div class="container"  style="width: 100%;">
+      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse"
+      data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="oi oi-menu"></span> Menu
+    </button>
+    <a class="navbar-brand turn-white" href="index.html">$$</a>
+      <div class="collapse navbar-collapse" id="ftco-nav">
+        <ul class="navbar-nav nav ml-auto">
+          <li class="nav-item">
+            <a href="https://sonusourav.github.io/index.html#home-section" class="nav-link"><span
+                class="turn-white">Home</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="https://sonusourav.github.io/index.html#about-section" class="nav-link"><span
+                class="turn-white">About</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="https://sonusourav.github.io/index.html#skills-section" class="nav-link"><span
+                class="turn-white">Skills</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="https://sonusourav.github.io/index.html#timeline-section" class="nav-link"><span
+                class="turn-white">Timeline</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="https://sonusourav.github.io/index.html#projects-section" class="nav-link"><span
+                class="turn-white">Projects</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="https://sonusourav.github.io/index.html#blog-section" class="nav-link"><span
+                class="turn-white">Blog</span></a>
+          </li>
+          <li class="nav-item">
+            <a href="https://sonusourav.github.io/index.html#contact-section" class="nav-link"><span
+                class="turn-white">Contact</span></a>
+          </li>
+        </ul>
+       
+      </div>
+      <div class="toggle-box" style="margin-top: 10px;">
+        <input type="checkbox" name="checkbox1" id="toggle-box-checkbox" />
+        <label for="toggle-box-checkbox" class="toggle-box-label-left"></label>
+        <label for="toggle-box-checkbox" class="toggle-box-label"></label>
+      </div>
     </div>
+  </nav>
 
-    <!-- Similar modals for other problems... (truncated for brevity, but would include RAG, Lambda, ETL, Cost, and API modals) -->
-
-    <!-- RAG Modal -->
-    <div id="rag-modal" class="modal fixed inset-0 z-50 hidden">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="modal-content rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-                <div class="p-8">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="flex items-center">
-                            <div class="w-16 h-16 bg-blue-100 dark:bg-blue-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-brain text-blue-600 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h2 class="text-3xl font-bold">Production RAG Systems</h2>
-                                <p class="text-gray-600 dark:text-gray-300">Enterprise-scale AI document processing</p>
-                            </div>
-                        </div>
-                        <button onclick="closeModal('rag-modal')" class="text-gray-500 hover:text-gray-700 text-2xl">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-
-                    <div class="grid md:grid-cols-2 gap-8">
-                        <div>
-                            <h3 class="text-xl font-bold mb-4 text-red-600">The Challenge</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-6">
-                                Traditional document search fails with complex queries and lacks contextual understanding. 
-                                Enterprise customers need sub-second responses across millions of documents with high accuracy.
-                            </p>
-
-                            <h3 class="text-xl font-bold mb-4 text-blue-600">My Solution</h3>
-                            <ul class="space-y-3 text-gray-700 dark:text-gray-300 mb-6">
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                                    <span><strong>Optimized embeddings</strong> with custom fine-tuning</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                                    <span><strong>Vector database</strong> with intelligent caching</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                                    <span><strong>Context-aware retrieval</strong> with re-ranking</span>
-                                </li>
-                                <li class="flex items-start">
-                                    <i class="fas fa-check-circle text-green-500 mr-3 mt-1"></i>
-                                    <span><strong>Streaming responses</strong> for better UX</span>
-                                </li>
-                            </ul>
-
-                            <h3 class="text-xl font-bold mb-4 text-green-600">Impact</h3>
-                            <div class="grid grid-cols-2 gap-4">
-                                <div class="bg-green-50 dark:bg-green-900 p-4 rounded-lg">
-                                    <div class="text-2xl font-bold text-green-600">65%</div>
-                                    <div class="text-sm text-gray-600 dark:text-gray-300">Latency Reduction</div>
-                                </div>
-                                <div class="bg-blue-50 dark:bg-blue-900 p-4 rounded-lg">
-                                    <div class="text-2xl font-bold text-blue-600">95%</div>
-                                    <div class="text-sm text-gray-600 dark:text-gray-300">Answer Accuracy</div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div>
-                            <h3 class="text-xl font-bold mb-4">RAG Pipeline</h3>
-                            <div class="bg-gray-900 rounded-lg p-4 mb-6">
-                                <div class="code-block">
-<pre><code># Production RAG Implementation
-class ProductionRAG:
-    def __init__(self):
-        self.embeddings = OptimizedEmbeddings()
-        self.vector_store = PineconeVectorStore()
-        self.llm = OpenAIChat()
-        self.cache = SmartCache()
-        
-    async def query(self, question: str) -> Dict:
-        # Check cache first
-        cached = await self.cache.get(question)
-        if cached:
-            return cached
-            
-        # Generate embeddings
-        query_embedding = await self.embeddings.encode(
-            question
-        )
-        
-        # Vector similarity search
-        relevant_docs = await self.vector_store.similarity_search(
-            query_embedding, 
-            k=10,
-            filters={"relevance_threshold": 0.8}
-        )
-        
-        # Re-rank results
-        reranked_docs = await self.rerank_documents(
-            question, relevant_docs
-        )
-        
-        # Generate streaming response
-        response = await self.llm.astream_chat(
-            messages=[
-                {"role": "system", "content": self.get_context(reranked_docs)},
-                {"role": "user", "content": question}
-            ]
-        )
-        
-        # Cache result
-        await self.cache.set(question, response)
-        return response</code></pre>
-                                </div>
-                            </div>
-
-                            <div class="flex flex-wrap gap-2 mb-6">
-                                <span class="tech-badge">LangChain</span>
-                                <span class="tech-badge">OpenAI</span>
-                                <span class="tech-badge">Pinecone</span>
-                                <span class="tech-badge">FastAPI</span>
-                                <span class="tech-badge">Redis</span>
-                            </div>
-
-                            <div class="flex space-x-4">
-                                <a href="#" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors">
-                                    <i class="fab fa-github mr-2"></i>View Implementation
-                                </a>
-                                <a href="#" class="border border-blue-600 text-blue-600 px-4 py-2 rounded-lg hover:bg-blue-600 hover:text-white transition-colors">
-                                    <i class="fas fa-play mr-2"></i>Try Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+  <section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_blog.jpg');"
+    data-stellar-background-ratio="0.5">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text align-items-end justify-content-center">
+        <div class="col-md-9 ftco-animate pb-5 text-center">
+          <h1 class="mb-3 bread">My Blogs</h1>
+          <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home <i
+                  class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.html">Blog <i
+                  class="ion-ios-arrow-forward"></i></a></span> <span>Hello Android! <i
+                class="ion-ios-arrow-forward"></i></span></p>
         </div>
+      </div>
     </div>
+  </section>
 
-    <!-- Additional modals for Lambda, ETL, Cost, and API would follow similar patterns -->
-    <!-- Lambda Modal -->
-    <div id="lambda-modal" class="modal fixed inset-0 z-50 hidden">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="modal-content rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-                <div class="p-8">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="flex items-center">
-                            <div class="w-16 h-16 bg-green-100 dark:bg-green-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-rocket text-green-600 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h2 class="text-3xl font-bold">Lambda CI/CD Pipeline</h2>
-                                <p class="text-gray-600 dark:text-gray-300">Zero-downtime serverless deployments</p>
-                            </div>
-                        </div>
-                        <button onclick="closeModal('lambda-modal')" class="text-gray-500 hover:text-gray-700 text-2xl">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="text-center py-8">
-                        <p class="text-gray-600 dark:text-gray-300">Detailed Lambda CI/CD implementation coming soon...</p>
-                    </div>
-                </div>
+
+  <section class="ftco-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 ftco-animate">
+          <h1 class="mb-3" style="color:royalblue "><b>Hello Android!</b></h1>
+          <h2 id="androidstudioinstallation">Android Studio Installation</h2>
+
+          <p>Android Studio is the official Integrated Development Environment (IDE) for Android app development, based
+            on IntelliJ IDEA.</p>
+
+          <p>Before starting the installation process, please Download the latest version of <a target="_blank"
+              href="https://developer.android.com/studio/">Android Studio</a>. You should have JDK (Java SE Development
+            Kit) 7+and you can download it from <a target="_blank"
+              href="https://www.oracle.com/technetwork/java/javase/downloads/index.html">here</a>.</p>
+
+          <p>So let's launch Android Studio.exe. Make sure before launching Android Studio, that environment variable
+            JAVA_HOME is set to the JDK installation directory via command <br />
+            <code>SET JAVA_HOME</code>. </p>
+
+          <p>Otherwise, Follow the steps <a target="_blank"
+              href="https://github.com/oss2019/HelloAndroid/blob/master/Setting%20Environment%20Variable%20-%20JAVA_HOME.md">HERE</a>.
+          </p>
+
+          <h3 id="installationonwindowsplatform"><b>Installation on Windows Platform</b></h3>
+
+          <h4 id="requirements">Requirements:</h4>
+
+          <ul>
+            <li>3 GB RAM minimum, 8 GB RAM recommended</li>
+
+            <li>1280 x 800 minimum screen resolution</li>
+
+            <li>Microsoft® Windows® 7/8/10 (32- or 64-bit)</li>
+          </ul>
+
+          <h4 id="installation">Installation</h4>
+
+          <ol>
+            <li>Launch <code>android-studio.exe</code> to start the installation process. The installer responds by
+              presenting the Android Studio Setup dialog box as shown. Click <strong>Next</strong> to go the
+              <strong>Android Virtual Device</strong> (AVD) screen.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54194875-48228e80-44e3-11e9-80df-b52831f74061.jpg"
+              alt="studio2" /></p>
+
+          <ol>
+            <li>Choose the default settings and click <strong>Next</strong>.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54194592-9edb9880-44e2-11e9-924c-f1cc5edf661c.jpg"
+              alt="studio3" /></p>
+
+          <ol>
+            <li>After clicking Next,the <strong>Configuration Settings</strong> panel will show up, where the place to
+              store android files have to be specified. After providing the location, click <strong>Next</strong>.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54194593-9edb9880-44e2-11e9-89ca-b58912709cd3.jpg"
+              alt="studio4" /></p>
+
+          <ol>
+            <li>On clicking Next, <strong>Choose Start Menu Folder panel</strong> shows up. Keep the default setting and
+              click <strong>Install</strong>.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54194594-9edb9880-44e2-11e9-89a4-56c175913c72.jpg"
+              alt="studio5" /></p>
+
+          <ol>
+            <li>The following Installing panel appears:</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54194595-9f742f00-44e2-11e9-9739-372893c3e78b.jpg"
+              alt="studio6" /></p>
+
+          <ol>
+            <li>Clicking <strong>Show details</strong> shows the names of files being installed and other activities.
+              When installation finishes, the Installation Complete panel appears.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54194597-9f742f00-44e2-11e9-8376-dc989faabcc3.jpg"
+              alt="studio7" /></p>
+
+          <ol>
+            <li>To complete the installation, leave the <strong>Start Android Studio</strong> box checked and click
+              <strong>Finish</strong>.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54194598-a00cc580-44e2-11e9-9c08-5bc5b9dd7cad.jpg"
+              alt="studio8" /></p>
+
+          <h4 id="runningandroidstudio">Running Android Studio</h4>
+
+          <ol>
+            <li>The first time Android Studio runs, it presents a <strong>Complete Installation</strong> dialog box that
+              offers the option of importing settings from a previous installation.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54205116-af4c3d00-44fb-11e9-8878-08e1a8a4b023.jpg"
+              alt="studio9" /></p>
+
+          <ol>
+            <li>Choose <strong>NOT</strong> to import settings (the default selection) and click <strong>OK</strong>,
+              which would take to the following splash screen:</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54194599-a00cc580-44e2-11e9-8481-8006bfd88988.jpg"
+              alt="studio10" /></p>
+
+          <ol>
+            <li>A message box which says <strong>Finding Available SDK Components</strong> pops up.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54205045-8c218d80-44fb-11e9-800b-8b0a4990dfaa.jpg"
+              alt="studio11" /></p>
+
+          <ol>
+            <li>At this point, Android Studio presents the following Android Studio Setup Wizard dialog box:</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193652-8d918c80-44e0-11e9-876f-2bd587bc8925.jpg"
+              alt="studio12" style="max-width: 300px;"/></p>
+
+          <ol>
+            <li>Click <strong>Next</strong>, and the wizard invites to select an installation type. Keep the default
+              <strong>Standard</strong> setting.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193654-8e2a2300-44e0-11e9-84a0-722fb4242645.jpg"
+              alt="studio13" style="max-width: 300px;"/></p>
+
+          <ol>
+            <li>The next window asks user to select a user Interface Theme. Choose any one theme and press
+              <strong>Next</strong>.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193655-8ec2b980-44e0-11e9-8ad7-c5c6a7b2341c.jpg"
+              alt="studio14" style="max-width: 300px;"/></p>
+
+          <ol>
+            <li>A <strong>Verify Settings</strong> window opens. Click <strong>Finish</strong> to begin the process of
+              downloading SDK components.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193657-8ec2b980-44e0-11e9-9d97-b8ccbbc1f3ee.jpg"
+              alt="studio15" style="max-width: 300px;"/></p>
+
+          <ol>
+            <li>On the next window, Android Studio begins the process of downloading SDK components.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193658-8ec2b980-44e0-11e9-8feb-15367ac4217b.jpg"
+              alt="studio16" style="max-width: 300px;"/></p>
+
+          <p>It can take several minutes for this part of the setup to finish. Finally, click <strong>Finish</strong> to
+            complete the wizard.</p>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193661-8f5b5000-44e0-11e9-9ec6-a22ad471b5a0.jpg"
+              alt="studio18" style="max-width: 300px;"/></p>
+
+          <p>The <strong>Welcome to Android Studio</strong> dialog box appears.</p>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54213076-cf82f880-4509-11e9-8837-87ceb525161b.jpg"
+              alt="studio1" style="max-width: 300px;"/></p>
+
+          <h4 id="creatingfirstapphelloworld">Creating first App - <strong>Hello World</strong></h4>
+
+          <p>Now the installation process is done, and we can move to create our first app, <strong>Hello World</strong>
+            - the beginning project of every developer.</p>
+
+          <ol>
+            <li>Click on <strong>Start a new Android Studio project</strong>. Android Studio will respond with the
+              Create New Project dialog box as shown.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193662-8ff3e680-44e0-11e9-9986-d95a24405b4c.jpg"
+              alt="studio19" style="max-width: 300px;"/></p>
+
+          <ol>
+            <li>Fill the project details and click <strong>Next</strong>.</li>
+          </ol>
+
+          <ul>
+            <li>
+              <p><strong>Application Name</strong> : It should match with the purpose of the app.</p>
+            </li>
+
+            <li>
+              <p><strong>Company Domain</strong> : It is the domain name, which will be the app identity when the app
+                will be uploaded on the playstore. <br />
+                It should have three terms atleast (e.g. com.iitdh.oss) and should be written in decreasing order ( com
+                -> company name -> project {->}.. ) and not in opposite order.</p>
+            </li>
+
+            <li>
+              <p><strong>Project Location</strong> : Specify the Project location. Make sure the location name does not
+                have white spaces in between. <br />
+                Generally, white spaces occurs in Computer Username (e.g. Sonu Sourav), in which case the user name
+                <br />
+                should be changed to a single word (e.g. SonuSourav) otherwise it poses a problem in the future.</p>
+
+              <p><img
+                  src="https://user-images.githubusercontent.com/34706326/54193664-8ff3e680-44e0-11e9-8ef0-bf5ea7d47f74.jpg"
+                  alt="studio20" style="max-width: 300px;"/></p>
+            </li>
+          </ul>
+
+          <ol>
+            <li>In the next window, select the target Android devices and click <strong>Next</strong>.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193665-908c7d00-44e0-11e9-8c47-1e56a9b64c44.jpg"
+              alt="studio21" style="max-width: 300px;"/></p>
+
+          <ol>
+            <li>The next window asks to select the type of Activity from the provided templates. Select <strong>Empty
+                Activity</strong> and click <strong>Next</strong>.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193667-908c7d00-44e0-11e9-8b5b-12f66b70a97c.jpg"
+              alt="studio22" style="max-width: 300px;"/></p>
+
+          <ol>
+            <li>Next enter the Activity and layout name. Type <strong>MainActivity</strong> and
+              <strong>activity_main</strong> in ActivityName and Layout name respectively. After this, press
+              <strong>Next</strong>.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193668-91251380-44e0-11e9-8489-1bf07a98f6bc.jpg"
+              alt="studio23" style="max-width: 300px;"/></p>
+
+          <ol>
+            <li>A Installer windows opens up which creates the project. This might take some time, so sit back and
+              relax. After its done, click <strong>Finish</strong>. </li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193669-91251380-44e0-11e9-9137-2e24500007a6.jpg"
+              alt="studio24" style="max-width: 300px;"/></p>
+
+          <ol>
+            <li>The project is setup and we are ready to create our first app.</li>
+          </ol>
+
+          <p><img
+              src="https://user-images.githubusercontent.com/34706326/54193670-91251380-44e0-11e9-99b4-56443682f64a.jpg"
+              alt="studio25" style="max-width: 300px;"/></p>
+
+          <h5 id="videotutorial">Video tutorial</h5>
+
+          <p>You can follow this video for Windows installation
+            <a target="_blank" href="https://developer.android.com/studio/videos/studio-install-windows.mp4">Video
+              Link</a></p>
+
+          <h4 id="installationonmacplatform"><b>Installation on Mac Platform</b></h4>
+
+          <h5 id="toinstallandroidstudioonyourmacproceedasfollows">To install Android Studio on your Mac, proceed as
+            follows:</h5>
+
+          <ol>
+            <li>Launch the Android Studio DMG file.</li>
+
+            <li>Drag and drop Android Studio into the Applications folder, then launch Android Studio.</li>
+
+            <li>Select whether you want to import previous Android Studio settings, then click OK.</li>
+
+            <li>The Android Studio Setup Wizard guides you through the rest of the setup, which includes downloading
+              Android SDK components that are required for development. Further steps are similar to <strong>Windows
+                Installation</strong> and can be found <a target="_blank"
+                href="https://github.com/oss2019/HelloAndroid/blob/master/Android%20Studio%20Installation%20-%20Windows.md">here</a>.
+            </li>
+          </ol>
+
+          <h5 id="videotutorial">Video Tutorial</h5>
+
+          <p>You can follow this video for Mac installation:
+            <a target="_blank" href="https://developer.android.com/studio/videos/studio-install-mac.mp4">Video Link</a>
+          </p>
+
+          <!-- Linux -->
+          <h4 id="installationonlinuxplatform"><b>Installation on Linux Platform</b></h4>
+
+          <h5 id="toinstallandroidstudioonlinuxproceedasfollows">To install Android Studio on Linux, proceed as follows:
+          </h5>
+
+          <ol>
+            <li>Unpack the <code>.zip</code> file you downloaded to an appropriate location for your applications, such
+              as within <code>/usr/local/</code> for your user profile, or <code>/opt/</code> for shared users.</li>
+
+            <li>To launch Android Studio, open a terminal, navigate to the <code>android-studio/bin/</code> directory,
+              and execute <code>studio.sh</code>.</li>
+
+            <li>Select whether you want to import previous Android Studio settings or not, then click OK.</li>
+
+            <li>The Android Studio Setup Wizard guides you through the rest of the setup, which includes downloading
+              Android SDK components that are required for development.
+              Further steps are similar to <strong>Windows Installation</strong> and can be found <a target="_blank"
+                href="https://github.com/oss2019/HelloAndroid/blob/master/Android%20Studio%20Installation%20-%20Windows.md">here</a>.
+            </li>
+          </ol>
+
+          <h4 id="requiredlibrariesfor64bitmachines">Required libraries for 64-bit machines:</h4>
+
+          <p>If you are running a 64-bit version of Ubuntu, you need to install some 32-bit libraries with the following
+            command:</p>
+
+          <p><code>sudo apt-get install libc6:i386 libncurses5:i386 libstdc++6:i386 lib32z1 libbz2-1.0:i386</code></p>
+
+          <p>If you are running 64-bit Fedora, the command is:</p>
+
+          <p><code>sudo yum install zlib.i686 ncurses-libs.i686 bzip2-libs.i686</code></p>
+
+          <h5 id="videotutorial">Video Tutorial</h5>
+
+          <p>You can follow this video for Linux installation:
+            <a target="_blank" href="https://developer.android.com/studio/videos/studio-install-linux.mp4">Video
+              Link</a></p>
+          <!-- End Linux -->
+          <!--End Content here-->
+          <div class="tag-widget post-tag-container mb-5 mt-5">
+            <div class="tagcloud">
+              <a class="tag-cloud-link">Android</a>
+              <a class="tag-cloud-link">Installation</a>
+              <a class="tag-cloud-link">Android Studio</a>
             </div>
-        </div>
-    </div>
+          </div>
 
-    <!-- ETL Modal -->
-    <div id="etl-modal" class="modal fixed inset-0 z-50 hidden">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="modal-content rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-                <div class="p-8">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="flex items-center">
-                            <div class="w-16 h-16 bg-purple-100 dark:bg-purple-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-database text-purple-600 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h2 class="text-3xl font-bold">ETL Reliability</h2>
-                                <p class="text-gray-600 dark:text-gray-300">Fault-tolerant data pipelines</p>
-                            </div>
-                        </div>
-                        <button onclick="closeModal('etl-modal')" class="text-gray-500 hover:text-gray-700 text-2xl">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="text-center py-8">
-                        <p class="text-gray-600 dark:text-gray-300">Detailed ETL reliability implementation coming soon...</p>
-                    </div>
-                </div>
+
+          <div class="about-author d-flex p-4 ">
+            <div class="bio mr-5">
+              <img src="images/about_pic.jpg" alt="Image placeholder" class="img-fluid mb-4"
+                style="margin-top: 20px; border-radius: 100px;">
             </div>
-        </div>
-    </div>
-
-    <!-- Cost Modal -->
-    <div id="cost-modal" class="modal fixed inset-0 z-50 hidden">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="modal-content rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-                <div class="p-8">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="flex items-center">
-                            <div class="w-16 h-16 bg-orange-100 dark:bg-orange-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-dollar-sign text-orange-600 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h2 class="text-3xl font-bold">Cost Optimization</h2>
-                                <p class="text-gray-600 dark:text-gray-300">40-60% infrastructure savings</p>
-                            </div>
-                        </div>
-                        <button onclick="closeModal('cost-modal')" class="text-gray-500 hover:text-gray-700 text-2xl">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="text-center py-8">
-                        <p class="text-gray-600 dark:text-gray-300">Detailed cost optimization strategies coming soon...</p>
-                    </div>
-                </div>
+            <div class="desc">
+              <h6><b>Sonu Sourav</b></h3>
+              <h6>Sonu is an undergraduate student at IIT Dharwad doing major in Electrical Engineering. He is passionate
+                about contributing to developer community and is associated with many developer programs like Developer
+                Student Club (DSC), Google Developer Group(GDG) and Open Student Society(OSS). You can always count him
+                when it comes to organising or volunteering tech related activities.</h6>
             </div>
-        </div>
-    </div>
+          </div>
 
-    <!-- API Modal -->
-    <div id="api-modal" class="modal fixed inset-0 z-50 hidden">
-        <div class="flex items-center justify-center min-h-screen p-4">
-            <div class="modal-content rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
-                <div class="p-8">
-                    <div class="flex justify-between items-start mb-6">
-                        <div class="flex items-center">
-                            <div class="w-16 h-16 bg-indigo-100 dark:bg-indigo-900 rounded-xl flex items-center justify-center mr-4">
-                                <i class="fas fa-tachometer-alt text-indigo-600 text-2xl"></i>
-                            </div>
-                            <div>
-                                <h2 class="text-3xl font-bold">API Performance</h2>
-                                <p class="text-gray-600 dark:text-gray-300">Millisecond response optimization</p>
-                            </div>
-                        </div>
-                        <button onclick="closeModal('api-modal')" class="text-gray-500 hover:text-gray-700 text-2xl">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="text-center py-8">
-                        <p class="text-gray-600 dark:text-gray-300">Detailed API performance optimization coming soon...</p>
-                    </div>
+          <!--Disqus comment section-->
+          <div id="disqus_thread"></div>
+          <script>
+
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+
+            var disqus_config = function () {
+              this.page.url = 'https://sonusourav.github.io/hello_android.html';  // Replace PAGE_URL with your page's canonical URL variable
+              this.page.identifier = '/hello_android.html'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+
+            (function () { // DON'T EDIT BELOW THIS LINE
+              var d = document, s = d.createElement('script');
+              s.src = 'https://sonusourav.disqus.com/embed.js';
+              s.setAttribute('data-timestamp', +new Date());
+              (d.head || d.body).appendChild(s);
+            })();
+          </script>
+          <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+              Disqus.</a></noscript>
+
+        </div> <!-- .col-md-8 -->
+        <div class="col-lg-4 sidebar ftco-animate">
+          <div class="sidebar-box ftco-animate">
+            <h3 class="heading-sidebar">Recent Blogs</h3>
+            <div class="block-21 mb-4 d-flex">
+              <a class="blog-img mr-4" style="background-image: url(images/hello_android.jpg);"></a>
+              <div class="text">
+                <h4 class="heading"><a href="single.html">Android Studio is the official Integrated Development
+                    Environment (IDE) for Android app development</a></h4>
+                <div class="meta">
+                  <div><span class="icon-calendar" style="color: inherit"></span> March 12, 2019</div>
+                  <div><span class="icon-person" style="color: inherit"></span> Sonu Sourav</div>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+
+      </div>
     </div>
+  </section> <!-- .section -->
 
-    <script>
-        // Theme Toggle
-        const themeToggle = document.getElementById('theme-toggle');
-        const html = document.documentElement;
+  <footer class="ftco-footer ftco-section" style="width: auto;">
+    <div class="container" >
+      <div class="row mb-5">
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Reach out to me here 👇 </h2>
+            <p>
+              Feel free to ping me for volunteering, discussing your ideas or grabbing a cup of coffee.
+            </p>
+            <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
+              <li class="ftco-animate">
+                <a href="https://www.linkedin.com/in/sonu-sourav-37b459149/"><span class="icon-linkedin"></span></a>
+              </li>
+              <li class="ftco-animate">
+                <a href="https://github.com/sonusourav"><span class="icon-github"></span></a>
+              </li>
+              <li class="ftco-animate">
+                <a href="https://www.facebook.com/sonusouravdx"><span class="icon-facebook"></span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md">
+          <div class="ftco-footer-widget mb-4">
+            <h2 class="ftco-heading-2">Have a Question?</h2>
+            <div class="block-23 mb-3">
+              <ul>
+                <li>
+                  <span class="icon icon-map-marker"></span><span class="text">Hostel-2 ( Bhairavi),
+                    IIT Dharwad, Walmi Campus, Dharwad,
+                    Karnataka, India PIN: 580011</span>
+                </li>
+                <li>
+                  <a href="https://www.skype.com/en/"><span class="icon icon-phone"></span><span class="text">+91
+                      9916228725</span></a>
+                </li>
+                <li>
+                  <a href="https://www.skype.com/en/"><span class="icon icon-skype"></span><span
+                      class="text">sonusouravdx001</span></a>
+                </li>
+                <li>
+                  <a href="#"><span class="icon icon-envelope"></span><span
+                      class="text">sonusouravdx001@gmail.com</span></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <h2 class="ftco-heading-2" style="text-align: center; color: white">
+          Made with ❤️ by <b>Sonu Sourav</b>
+        </h2>
+      </div>
+    </div>
+  </footer>
 
-        // Check for saved theme preference or default to system preference
-        const savedTheme = localStorage.getItem('theme');
-        const systemTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        const initialTheme = savedTheme || systemTheme;
 
-        html.setAttribute('data-theme', initialTheme);
-        if (initialTheme === 'dark') {
-            html.classList.add('dark');
-        }
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px">
+      <circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee" />
+      <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10"
+        stroke="#F96D00" /></svg></div>
 
-        themeToggle.addEventListener('click', () => {
-            const currentTheme = html.getAttribute('data-theme');
-            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-            
-            html.setAttribute('data-theme', newTheme);
-            html.classList.toggle('dark');
-            localStorage.setItem('theme', newTheme);
-        });
 
-        // Smooth scrolling for navigation links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/switch.js"></script>
 
-        // Active navigation highlighting
-        const navLinks = document.querySelectorAll('.nav-link');
-        const sections = document.querySelectorAll('section[id]');
+  <script src="js/main.js"></script>
+  <a href="#" id="scroll" style="display: none;"><span></span></a>
 
-        function highlightActiveSection() {
-            const scrollPos = window.scrollY + 100;
-            
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                const sectionHeight = section.offsetHeight;
-                const sectionId = section.getAttribute('id');
-                
-                if (scrollPos >= sectionTop && scrollPos < sectionTop + sectionHeight) {
-                    navLinks.forEach(link => {
-                        link.classList.remove('text-blue-600', 'font-semibold');
-                        link.classList.add('text-gray-700');
-                        
-                        if (link.getAttribute('href') === `#${sectionId}`) {
-                            link.classList.remove('text-gray-700');
-                            link.classList.add('text-blue-600', 'font-semibold');
-                        }
-                    });
-                }
-            });
-        }
-
-        window.addEventListener('scroll', highlightActiveSection);
-
-        // Intersection Observer for animations
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.opacity = '1';
-                    entry.target.style.transform = 'translateY(0)';
-                    
-                    // Animate skill bars
-                    if (entry.target.classList.contains('skill-bar')) {
-                        entry.target.classList.add('animate');
-                    }
-                }
-            });
-        }, observerOptions);
-
-        // Observe elements for animation
-        document.querySelectorAll('.card-hover, .skill-bar').forEach(el => {
-            el.style.opacity = '0';
-            el.style.transform = 'translateY(20px)';
-            el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-            observer.observe(el);
-        });
-
-        // Typing animation
-        function typeWriter(element, text, speed = 100) {
-            let i = 0;
-            element.innerHTML = '';
-            
-            function type() {
-                if (i < text.length) {
-                    element.innerHTML += text.charAt(i);
-                    i++;
-                    setTimeout(type, speed);
-                }
-            }
-            
-            type();
-        }
-
-        // Initialize typing animation
-        window.addEventListener('load', () => {
-            const typingElement = document.querySelector('.typing-animation');
-            if (typingElement) {
-                typeWriter(typingElement, 'AI Innovator', 150);
-            }
-        });
-
-        // Modal functions
-        function openModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.remove('hidden');
-                document.body.style.overflow = 'hidden';
-            }
-        }
-
-        function closeModal(modalId) {
-            const modal = document.getElementById(modalId);
-            if (modal) {
-                modal.classList.add('hidden');
-                document.body.style.overflow = 'auto';
-            }
-        }
-
-        // Close modal when clicking outside
-        document.querySelectorAll('.modal').forEach(modal => {
-            modal.addEventListener('click', (e) => {
-                if (e.target === modal) {
-                    closeModal(modal.id);
-                }
-            });
-        });
-
-        // Contact form handling
-        document.getElementById('contact-form').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
-            
-            // Create mailto link with form data
-            const subject = encodeURIComponent(`Portfolio Contact from ${name}`);
-            const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
-            const mailtoLink = `mailto:safdar@mosafdar.com?subject=${subject}&body=${body}`;
-            
-            // Open email client
-            window.location.href = mailtoLink;
-            
-            // Show success message
-            alert('Email client opened! Thank you for your message.');
-            
-            // Reset form
-            this.reset();
-        });
-
-        // Intersection Observer for skill bars
-        const skillObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const skillBars = entry.target.querySelectorAll('.skill-bar');
-                    skillBars.forEach((bar, index) => {
-                        setTimeout(() => {
-                            bar.classList.add('animate');
-                        }, index * 200);
-                    });
-                }
-            });
-        }, { threshold: 0.5 });
-
-        // Observe skills section
-        const skillsSection = document.getElementById('skills');
-        if (skillsSection) {
-            skillObserver.observe(skillsSection);
-        }
-
-        // Prevent animations on reduced motion preference
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-            document.querySelectorAll('.animate-float, .animate-glow').forEach(el => {
-                el.style.animation = 'none';
-            });
-        }
-
-        // Analytics placeholder - Replace with actual analytics code
-        /*
-        // Google Analytics 4 Integration
-        // Replace 'GA_MEASUREMENT_ID' with your actual GA4 measurement ID
-        
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'GA_MEASUREMENT_ID');
-        
-        // Track custom events
-        function trackEvent(eventName, parameters) {
-            gtag('event', eventName, parameters);
-        }
-        
-        // Example usage:
-        // trackEvent('contact_form_submit', { method: 'email' });
-        // trackEvent('project_view', { project_name: 'TalkWithDoc' });
-        */
-    </script>
 </body>
+
 </html>
