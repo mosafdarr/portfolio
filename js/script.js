@@ -1,24 +1,13 @@
-/* Mosafdar site JS
-   - Fast smooth scroll (no lag)
-   - Dark/Light mode toggle (saved)
-   - Contact form submission:
-       1) If NETLIFY: submits to Netlify (same form HTML)
-       2) If FORM_ENDPOINT is set: submits via fetch
-       3) Otherwise fallback to mailto
-*/
-
 (function () {
   'use strict';
 
   const THEME_KEY = 'mosafdar_theme';
-  const DEFAULT_SCROLL_MS = 420; // quick, feels instant
   const EMAIL_TO = 'mosafdaralii@gmail.com';
 
-  // Optional: set a real endpoint (Formspree / your API) later
-  // Example: window.FORM_ENDPOINT = "https://formspree.io/f/xxxxxx";
-  const FORM_ENDPOINT = window.FORM_ENDPOINT || '';
+  // ✅ Put your Formspree endpoint here (recommended)
+  // Example: https://formspree.io/f/abcdwxyz
+  const FORMSPREE_ENDPOINT = window.FORMSPREE_ENDPOINT || '';
 
-  // Elements
   const header = document.getElementById('siteHeader');
   const toastEl = document.getElementById('toast');
   const yearEl = document.getElementById('year');
@@ -30,21 +19,17 @@
 
   const form = document.getElementById('leadForm');
 
-  // Init
-  document.addEventListener('DOMContentLoaded', init);
+  // Run immediately (no dependency on DOMContentLoaded timing)
+  init();
 
   function init() {
     if (yearEl) yearEl.textContent = new Date().getFullYear();
-
     initHeaderScroll();
     initTheme();
     initFastAnchorScroll();
     initForm();
   }
 
-  // --------------------------
-  // Header scroll effect
-  // --------------------------
   function initHeaderScroll() {
     if (!header) return;
     const onScroll = () => {
@@ -56,24 +41,18 @@
   }
 
   // --------------------------
-  // Theme toggle (dark/light)
+  // Theme
   // --------------------------
   function initTheme() {
     const saved = localStorage.getItem(THEME_KEY);
+    const systemLight = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches;
 
-    // default to system preference if nothing saved
-    let theme = saved;
-    if (!theme) {
-      theme = window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches
-        ? 'light'
-        : 'dark';
-    }
-
-    setTheme(theme);
+    const initialTheme = saved || (systemLight ? 'light' : 'dark');
+    setTheme(initialTheme);
 
     const toggleHandler = () => {
-      const current = document.documentElement.getAttribute('data-theme') || 'dark';
-      setTheme(current === 'dark' ? 'light' : 'dark');
+      const isLight = document.documentElement.classList.contains('theme-light');
+      setTheme(isLight ? 'dark' : 'light');
     };
 
     if (themeToggle) themeToggle.addEventListener('click', toggleHandler);
@@ -81,23 +60,20 @@
   }
 
   function setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
+    document.documentElement.classList.remove('theme-dark', 'theme-light');
+    document.documentElement.classList.add(theme === 'light' ? 'theme-light' : 'theme-dark');
     localStorage.setItem(THEME_KEY, theme);
 
-    const isLight = theme === 'light';
-    const iconClass = isLight ? 'fa-sun' : 'fa-moon';
-
-    if (themeIcon) themeIcon.className = `fa-solid ${iconClass}`;
-    if (themeIconMobile) themeIconMobile.className = `fa-solid ${iconClass}`;
-
-    // small toast only on manual change could be added, but keeping silent
+    const icon = theme === 'light' ? 'fa-sun' : 'fa-moon';
+    if (themeIcon) themeIcon.className = `fa-solid ${icon}`;
+    if (themeIconMobile) themeIconMobile.className = `fa-solid ${icon}`;
   }
 
   // --------------------------
-  // Fast smooth anchor scrolling (no lag)
+  // Fast scroll (no lag)
   // --------------------------
   function initFastAnchorScroll() {
-    const links = document.querySelectorAll('a[href^="#"].nav-link, a[href^="#"]');
+    const links = document.querySelectorAll('a[href^="#"]');
     links.forEach((a) => {
       a.addEventListener('click', (e) => {
         const href = a.getAttribute('href');
@@ -110,37 +86,12 @@
         e.preventDefault();
 
         const headerHeight = header ? header.offsetHeight : 0;
-        const targetY = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 14;
+        const y = target.getBoundingClientRect().top + window.pageYOffset - headerHeight - 12;
 
-        animateScrollTo(targetY, DEFAULT_SCROLL_MS);
+        window.scrollTo({ top: y, behavior: 'smooth' });
         closeMobileMenu();
       });
     });
-  }
-
-  function animateScrollTo(targetY, durationMs) {
-    const startY = window.pageYOffset;
-    const diff = targetY - startY;
-    const start = performance.now();
-
-    if (Math.abs(diff) < 4) {
-      window.scrollTo(0, targetY);
-      return;
-    }
-
-    function easeOutCubic(t) {
-      return 1 - Math.pow(1 - t, 3);
-    }
-
-    function step(now) {
-      const elapsed = now - start;
-      const t = Math.min(elapsed / durationMs, 1);
-      const eased = easeOutCubic(t);
-      window.scrollTo(0, startY + diff * eased);
-      if (t < 1) requestAnimationFrame(step);
-    }
-
-    requestAnimationFrame(step);
   }
 
   // --------------------------
@@ -160,12 +111,9 @@
     }
   };
 
-  window.closeMobileMenu = closeMobileMenu;
-
   function closeMobileMenu() {
     const menu = document.getElementById('mobile-menu');
     if (!menu) return;
-
     menu.classList.remove('show');
     setTimeout(() => {
       menu.classList.add('hidden');
@@ -180,21 +128,13 @@
     try {
       await navigator.clipboard.writeText(text);
       toast(`Copied: ${text}`, true);
-    } catch (e) {
-      const ta = document.createElement('textarea');
-      ta.value = text;
-      ta.style.position = 'fixed';
-      ta.style.left = '-9999px';
-      document.body.appendChild(ta);
-      ta.select();
-      document.execCommand('copy');
-      ta.remove();
-      toast(`Copied: ${text}`, true);
+    } catch {
+      toast('Copy failed. Please copy manually.', false);
     }
   };
 
   // --------------------------
-  // Form submission (enabled)
+  // Form (works via Formspree OR mailto fallback)
   // --------------------------
   function initForm() {
     if (!form) return;
@@ -209,55 +149,30 @@
       const help = (data.get('help') || '').toString().trim();
 
       if (!name || !email || !help) {
-        toast('Please fill Name, Email, and Project Details.', false);
+        toast('Please fill Name, Email and Project Details.', false);
         return;
       }
 
-      // 1) If a custom endpoint is set, use it
-      if (FORM_ENDPOINT) {
+      // ✅ If Formspree endpoint exists, submit via fetch
+      if (FORMSPREE_ENDPOINT) {
         try {
-          const payload = new URLSearchParams();
-          for (const [k, v] of data.entries()) payload.append(k, v.toString());
-
-          const res = await fetch(FORM_ENDPOINT, {
+          const res = await fetch(FORMSPREE_ENDPOINT, {
             method: 'POST',
-            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: payload.toString()
+            headers: { 'Accept': 'application/json' },
+            body: data
           });
 
-          if (!res.ok) throw new Error('Endpoint failed');
+          if (!res.ok) throw new Error('Formspree failed');
+
           toast('Request sent! I’ll reply soon.', true);
           form.reset();
           return;
-        } catch (err) {
-          toast('Could not submit to endpoint. Using email fallback…', false);
-          // fall through to mailto
+        } catch {
+          toast('Could not submit. Opening email fallback…', false);
         }
       }
 
-      // 2) Try Netlify form submit (works when deployed on Netlify)
-      // This is safe to attempt; if not Netlify, it will fail and fallback to mailto
-      try {
-        const payload = new URLSearchParams();
-        for (const [k, v] of data.entries()) payload.append(k, v.toString());
-
-        const res = await fetch('/', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: payload.toString()
-        });
-
-        if (res.ok) {
-          toast('Request sent! Redirecting…', true);
-          setTimeout(() => window.location.href = form.getAttribute('action') || '/success.html', 700);
-          form.reset();
-          return;
-        }
-      } catch (err) {
-        // ignore and fallback
-      }
-
-      // 3) Always-works fallback: mailto
+      // Fallback to mailto (always works)
       const subject = encodeURIComponent(`Project Inquiry — ${name}${company ? ' (' + company + ')' : ''}`);
       const body = encodeURIComponent(
         `Name: ${name}\nEmail: ${email}\nCompany/Product: ${company || '-'}\n\nWhat I need help with:\n${help}\n\n---\nSent from mosafdar.com`
@@ -268,20 +183,12 @@
     });
   }
 
-  // --------------------------
-  // Toast
-  // --------------------------
-  function toast(message, isSuccess) {
+  function toast(message, ok) {
     if (!toastEl) return;
     toastEl.classList.remove('hidden');
-    toastEl.innerHTML = isSuccess
-      ? `<strong>Done.</strong> ${escapeHtml(message)}`
-      : escapeHtml(message);
-
+    toastEl.innerHTML = ok ? `<strong>Done.</strong> ${escapeHtml(message)}` : escapeHtml(message);
     clearTimeout(window.__toastTimer);
-    window.__toastTimer = setTimeout(() => {
-      toastEl.classList.add('hidden');
-    }, 2800);
+    window.__toastTimer = setTimeout(() => toastEl.classList.add('hidden'), 2800);
   }
 
   function escapeHtml(str) {
