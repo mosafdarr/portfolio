@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mosafdar  AI & Automation Studio for SaaS & Agencies</title>
+  <title>Mosafdar AI & Automation Studio for SaaS & Agencies</title>
 
   <link rel="icon" type="image/png" href="images/profile.jpg" />
   <script src="https://cdn.tailwindcss.com"></script>
@@ -168,6 +168,85 @@
     </div>
   </section>
 
+  <!-- ✅ FIT / NOT FIT (RESTORED) -->
+  <section id="fit" class="py-20 px-6 lg:px-12">
+    <div class="container mx-auto max-w-6xl">
+      <div class="text-center mb-14">
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 site-text">Is this a fit?</h2>
+        <p class="text-xl site-secondary max-w-3xl mx-auto">
+          Quick honesty check so you don’t waste time. If you’re in the “fit” column, a short call is usually enough to scope the fastest path.
+        </p>
+      </div>
+
+      <div class="grid lg:grid-cols-2 gap-6">
+        <!-- Fit -->
+        <div class="card-surface rounded-3xl p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center site-border">
+              <i class="fa-solid fa-circle-check accent-cyan text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold site-text">Great fit if…</h3>
+          </div>
+
+          <ul class="space-y-4 site-secondary">
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check accent-cyan mt-1"></i>
+              <span>You want to ship an AI feature (RAG/LLM) into a real product with clean APIs and guardrails.</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check accent-cyan mt-1"></i>
+              <span>You have manual ops/reporting and want reliable automation (ETL, integrations, alerts).</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check accent-cyan mt-1"></i>
+              <span>You need a senior builder who can own architecture, deliver fast, and document the handoff.</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-check accent-cyan mt-1"></i>
+              <span>You want weekly demos + async communication (low meeting overhead).</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Not Fit -->
+        <div class="card-surface rounded-3xl p-8">
+          <div class="flex items-center gap-3 mb-6">
+            <div class="w-10 h-10 rounded-xl flex items-center justify-center site-border">
+              <i class="fa-solid fa-circle-xmark text-xl"></i>
+            </div>
+            <h3 class="text-2xl font-bold site-text">Not a fit if…</h3>
+          </div>
+
+          <ul class="space-y-4 site-secondary">
+            <li class="flex gap-3">
+              <i class="fa-solid fa-xmark mt-1"></i>
+              <span>You need “cheap dev hours” without ownership, planning, or engineering standards.</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-xmark mt-1"></i>
+              <span>You want a vague AI prototype with no deployment, monitoring, or security requirements.</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-xmark mt-1"></i>
+              <span>You need 24/7 on-call support (I’m best for build + handoff, or a defined support retainer).</span>
+            </li>
+            <li class="flex gap-3">
+              <i class="fa-solid fa-xmark mt-1"></i>
+              <span>You don’t have access to the tools/data needed to build (or can’t provide it during the project).</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="#contact" class="nav-link btn-secondary px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-2">
+          <i class="fa-solid fa-calendar"></i>
+          <span>Check fit on a quick call</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
   <!-- Proof -->
   <section id="proof" class="py-20 px-6 lg:px-12">
     <div class="container mx-auto max-w-6xl">
@@ -219,6 +298,53 @@
             <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> Large-scale pipelines</div>
             <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> Quality checks</div>
             <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> Alerts & runs</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ✅ “GOOD QUESTIONS” / OBJECTIONS (RESTORED) -->
+  <section id="good-questions" class="py-20 px-6 lg:px-12">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid lg:grid-cols-2 gap-10 items-start">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 site-text">Good questions to ask me</h2>
+          <p class="text-xl site-secondary leading-relaxed">
+            If you’re evaluating builders, these questions tell you quickly whether the project will ship cleanly and stay maintainable.
+          </p>
+
+          <div class="mt-8 space-y-4">
+            <div class="card-surface rounded-2xl p-5">
+              <div class="font-semibold site-text">“How will you evaluate the AI output?”</div>
+              <div class="site-secondary mt-1">We define test cases, quality metrics, and monitor drift after launch.</div>
+            </div>
+            <div class="card-surface rounded-2xl p-5">
+              <div class="font-semibold site-text">“What happens after v1 ships?”</div>
+              <div class="site-secondary mt-1">You get docs, handoff, and an option for a small support/iteration retainer.</div>
+            </div>
+            <div class="card-surface rounded-2xl p-5">
+              <div class="font-semibold site-text">“How do you keep systems reliable?”</div>
+              <div class="site-secondary mt-1">Observability, alerts, retries, idempotency, and clear failure modes.</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card-surface rounded-3xl p-8">
+          <h3 class="text-2xl font-bold site-text mb-4">What you get (so it doesn’t break later)</h3>
+          <ul class="space-y-4 site-secondary">
+            <li class="flex gap-3"><i class="fa-solid fa-check accent-cyan mt-1"></i><span>Clean architecture + readable code</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check accent-cyan mt-1"></i><span>Deployment notes + env setup</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check accent-cyan mt-1"></i><span>Tests where they matter most</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check accent-cyan mt-1"></i><span>Monitoring/alerts guidance (or implementation)</span></li>
+            <li class="flex gap-3"><i class="fa-solid fa-check accent-cyan mt-1"></i><span>Weekly demos + async updates</span></li>
+          </ul>
+
+          <div class="mt-8">
+            <a href="#contact" class="nav-link btn-primary px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-2">
+              <span>Ask these on a call</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
           </div>
         </div>
       </div>
@@ -293,7 +419,7 @@
     </div>
   </section>
 
-  <!-- FAQ -->
+  <!-- FAQ (RESTORED + EXPANDED) -->
   <section id="faq" class="py-20 px-6 lg:px-12">
     <div class="container mx-auto max-w-5xl">
       <div class="text-center mb-12">
@@ -305,6 +431,31 @@
         <details class="faq-item" open>
           <summary>How do projects start? <i class="fa-solid fa-chevron-down"></i></summary>
           <div class="faq-content">We do a short call, then I send milestones + scope. Most projects start within days.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What does a typical timeline look like? <i class="fa-solid fa-chevron-down"></i></summary>
+          <div class="faq-content">Most builds ship in 2–6 weeks depending on scope. You get weekly demos and a clear checklist to launch.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Do you work with existing codebases? <i class="fa-solid fa-chevron-down"></i></summary>
+          <div class="faq-content">Yes. I can extend or refactor existing systems, add tests, improve reliability, and ship new features without breaking production.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>Can you integrate AI safely (privacy, access, logging)? <i class="fa-solid fa-chevron-down"></i></summary>
+          <div class="faq-content">Yes. We define data boundaries, role-based access, safe prompting, redaction where needed, plus monitoring/evaluation for outputs.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>What if I’m not sure what I need yet? <i class="fa-solid fa-chevron-down"></i></summary>
+          <div class="faq-content">That’s common. On the call we clarify the outcome, identify constraints, and pick the smallest version that delivers measurable value.</div>
+        </details>
+
+        <details class="faq-item">
+          <summary>How do payments work? <i class="fa-solid fa-chevron-down"></i></summary>
+          <div class="faq-content">Usually milestone-based. You approve scope, we ship in weekly increments, and you always know what’s next.</div>
         </details>
       </div>
     </div>
@@ -364,10 +515,6 @@
               <button type="submit" class="w-full btn-primary py-4 rounded-full text-lg font-semibold">
                 Send Request
               </button>
-
-              <p class="site-muted text-sm text-center">
-                Works via Formspree (recommended) or email fallback.
-              </p>
             </form>
           </div>
 
@@ -375,7 +522,7 @@
       </div>
 
       <div class="text-center mt-10 site-muted">
-        <p>© <span id="year"></span> Mosafdar  AI & Automation Studio</p>
+        <p>© <span id="year"></span> Mosafdar AI & Automation Studio</p>
       </div>
     </div>
   </section>
