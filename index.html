@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mosafdar — AI & Automation Studio for SaaS & Agencies</title>
+  <title>Mosafdar  AI & Automation Studio for SaaS & Agencies</title>
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/profile.jpg" />
@@ -49,41 +49,55 @@
   <!-- Header -->
   <header id="siteHeader" class="fixed top-0 w-full bg-dark-bg/90 backdrop-blur-sm z-50 border-b border-transparent">
     <nav class="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
+
       <a href="#top" class="flex items-center gap-3">
         <div class="w-9 h-9 rounded-xl overflow-hidden border border-dark-border">
           <img src="images/profile.jpg" alt="Mosafdar" class="w-full h-full object-cover" />
         </div>
         <div class="leading-tight">
-          <div class="text-white font-bold">Mosafdar</div>
+          <div class="text-text-primary font-bold">Mosafdar</div>
           <div class="text-text-muted text-xs">AI & Automation Studio</div>
         </div>
       </a>
 
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href="#offers" class="text-text-secondary hover:text-text-primary transition-colors">Offer</a>
-        <a href="#proof" class="text-text-secondary hover:text-text-primary transition-colors">Proof</a>
-        <a href="#process" class="text-text-secondary hover:text-text-primary transition-colors">Process</a>
-        <a href="#faq" class="text-text-secondary hover:text-text-primary transition-colors">FAQ</a>
+        <a href="#offers" class="nav-link text-text-secondary hover:text-text-primary transition-colors">Offer</a>
+        <a href="#proof" class="nav-link text-text-secondary hover:text-text-primary transition-colors">Proof</a>
+        <a href="#process" class="nav-link text-text-secondary hover:text-text-primary transition-colors">Process</a>
+        <a href="#faq" class="nav-link text-text-secondary hover:text-text-primary transition-colors">FAQ</a>
+
+        <!-- Theme Toggle -->
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
+          <i id="themeIcon" class="fa-solid fa-moon"></i>
+        </button>
+
         <a href="#contact" class="btn-primary px-6 py-2 rounded-full transition-colors text-text-primary font-medium">
           Book a Call
         </a>
       </div>
 
       <!-- Mobile Menu Button -->
-      <button class="md:hidden text-white" aria-label="Open menu" onclick="toggleMobileMenu()">
-        <i class="fas fa-bars text-xl"></i>
-      </button>
+      <div class="md:hidden flex items-center gap-3">
+        <!-- Theme Toggle (mobile) -->
+        <button id="themeToggleMobile" class="theme-toggle" type="button" aria-label="Toggle theme">
+          <i id="themeIconMobile" class="fa-solid fa-moon"></i>
+        </button>
+
+        <button class="text-text-primary" aria-label="Open menu" onclick="toggleMobileMenu()">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
     </nav>
 
     <!-- Mobile Nav -->
     <div id="mobile-menu" class="hidden md:hidden bg-dark-bg border-t border-dark-border">
       <div class="container mx-auto px-6 py-4 space-y-4">
-        <a href="#offers" class="block text-text-secondary hover:text-text-primary transition-colors">Offer</a>
-        <a href="#proof" class="block text-text-secondary hover:text-text-primary transition-colors">Proof</a>
-        <a href="#process" class="block text-text-secondary hover:text-text-primary transition-colors">Process</a>
-        <a href="#faq" class="block text-text-secondary hover:text-text-primary transition-colors">FAQ</a>
-        <a href="#contact" class="block btn-primary px-6 py-3 rounded-full text-text-primary font-medium text-center">
+        <a href="#offers" class="nav-link block text-text-secondary hover:text-text-primary transition-colors">Offer</a>
+        <a href="#proof" class="nav-link block text-text-secondary hover:text-text-primary transition-colors">Proof</a>
+        <a href="#process" class="nav-link block text-text-secondary hover:text-text-primary transition-colors">Process</a>
+        <a href="#faq" class="nav-link block text-text-secondary hover:text-text-primary transition-colors">FAQ</a>
+        <a href="#contact" class="nav-link block btn-primary px-6 py-3 rounded-full text-text-primary font-medium text-center">
           Book a Call
         </a>
       </div>
@@ -112,10 +126,10 @@
         </p>
 
         <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#contact" class="btn-primary px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-[1.02]">
+          <a href="#contact" class="nav-link btn-primary px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-[1.02]">
             Book a Free Strategy Call
           </a>
-          <a href="#offers" class="btn-secondary px-8 py-4 rounded-full text-lg font-semibold transition-all">
+          <a href="#offers" class="nav-link btn-secondary px-8 py-4 rounded-full text-lg font-semibold transition-all">
             See the Offer
           </a>
         </div>
@@ -128,7 +142,6 @@
         </div>
       </div>
 
-      <!-- Mini credibility row -->
       <div class="mt-14 grid md:grid-cols-3 gap-6">
         <div class="stat-card">
           <div class="stat-title">Delivery Style</div>
@@ -159,7 +172,6 @@
         </p>
       </div>
 
-      <!-- Who it's for -->
       <div class="grid lg:grid-cols-2 gap-8 mb-12">
         <div class="bg-dark-card border border-dark-border rounded-2xl p-8">
           <h3 class="text-2xl font-bold mb-4">Great fit if you are…</h3>
@@ -188,7 +200,7 @@
           <div class="space-y-3 text-text-secondary">
             <div class="flex items-start gap-3">
               <i class="fa-solid fa-xmark text-red-accent mt-1"></i>
-              <span>Want the cheapest developer — not outcome-focused delivery</span>
+              <span>Want the cheapest developer  not outcome-focused delivery</span>
             </div>
             <div class="flex items-start gap-3">
               <i class="fa-solid fa-xmark text-red-accent mt-1"></i>
@@ -206,7 +218,6 @@
         </div>
       </div>
 
-      <!-- 4 Offers -->
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div class="offer-card">
           <div class="offer-icon"><i class="fa-solid fa-robot"></i></div>
@@ -254,7 +265,7 @@
       </div>
 
       <div class="text-center mt-12">
-        <a href="#contact" class="inline-flex items-center gap-2 btn-primary px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="#contact" class="nav-link inline-flex items-center gap-2 btn-primary px-8 py-4 rounded-full text-lg font-semibold">
           <span>Book a Call</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
@@ -263,7 +274,7 @@
     </div>
   </section>
 
-  <!-- Proof / Case Studies -->
+  <!-- Proof -->
   <section id="proof" class="py-20 px-6 lg:px-12">
     <div class="container mx-auto max-w-6xl">
       <div class="text-center mb-14">
@@ -330,8 +341,8 @@
       </div>
 
       <div class="text-center mt-12">
-        <a href="#contact" class="text-navy-primary hover:text-blue-accent underline">Talk through your use-case</a>
-        <span class="text-text-secondary"> — I’ll suggest the quickest path to impact.</span>
+        <a href="#contact" class="nav-link text-navy-primary hover:text-blue-accent underline">Talk through your use-case</a>
+        <span class="text-text-secondary">  I’ll suggest the quickest path to impact.</span>
       </div>
     </div>
   </section>
@@ -342,7 +353,7 @@
       <div class="text-center mb-14">
         <h2 class="text-3xl md:text-4xl font-bold mb-4">How we deliver (fast, clean, measurable)</h2>
         <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-          You get clarity, milestones, and weekly progress — without chaos.
+          You get clarity, milestones, and weekly progress  without chaos.
         </p>
       </div>
 
@@ -381,69 +392,10 @@
       </div>
 
       <div class="text-center mt-12">
-        <a href="#contact" class="btn-primary px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-2">
+        <a href="#contact" class="nav-link btn-primary px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-2">
           <span>Book a Call</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- About -->
-  <section id="about" class="py-20 px-6 lg:px-12">
-    <div class="container mx-auto max-w-6xl">
-      <div class="grid lg:grid-cols-2 gap-14 items-center">
-        <div>
-          <h2 class="text-3xl md:text-4xl font-bold mb-4">Founder-led. Delivery-focused.</h2>
-          <p class="text-xl text-text-secondary mb-6">
-            I’m Muhammad Safdar (Mos). I build AI & automation systems that ship to production and stay maintainable.
-          </p>
-
-          <div class="space-y-4 text-text-secondary leading-relaxed">
-            <p>
-              I work best with founders and agency owners who want fast progress and clear outcomes. My sweet spot is
-              Python backends, data pipelines, and RAG/LLM systems that create real operational leverage.
-            </p>
-            <p>
-              Based in Pakistan. Working globally with async-friendly communication and weekly demos.
-            </p>
-          </div>
-
-          <div class="mt-8 flex flex-wrap gap-3">
-            <span class="tag">FastAPI</span>
-            <span class="tag">Django</span>
-            <span class="tag">PostgreSQL</span>
-            <span class="tag">Redis</span>
-            <span class="tag">RAG/LLMs</span>
-            <span class="tag">AWS</span>
-            <span class="tag">ETL</span>
-          </div>
-
-          <div class="mt-8 flex items-center gap-5">
-            <a href="https://linkedin.com/in/mosafdar" class="social-link" target="_blank" rel="noopener">
-              <i class="fab fa-linkedin text-2xl"></i>
-            </a>
-            <a href="https://github.com/mosafdarr" class="social-link" target="_blank" rel="noopener">
-              <i class="fab fa-github text-2xl"></i>
-            </a>
-            <a href="mailto:mosafdaralii@gmail.com" class="social-link">
-              <i class="fas fa-envelope text-2xl"></i>
-            </a>
-          </div>
-
-          <div class="mt-8">
-            <a href="#contact" class="btn-secondary px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-2">
-              <i class="fa-solid fa-calendar"></i>
-              <span>Discuss your project</span>
-            </a>
-          </div>
-        </div>
-
-        <div class="flex justify-center lg:justify-end">
-          <div class="profile-card">
-            <img src="images/profile.jpg" alt="Muhammad Safdar" class="w-full h-full object-cover" />
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -493,7 +445,7 @@
             <i class="fa-solid fa-chevron-down"></i>
           </summary>
           <div class="faq-content">
-            Practical AI: RAG assistants for internal knowledge, AI-powered analysis/reporting, and workflow automation — not vague “AI for AI’s sake”.
+            Practical AI: RAG assistants for internal knowledge, AI-powered analysis/reporting, and workflow automation  not vague “AI for AI’s sake”.
           </div>
         </details>
       </div>
@@ -512,11 +464,11 @@
             </span>
 
             <h2 class="text-3xl md:text-4xl font-bold mb-4">
-              Tell me what you’re building — I’ll suggest the fastest path to impact
+              Tell me what you’re building  I’ll suggest the fastest path to impact
             </h2>
 
             <p class="text-xl text-text-secondary mb-6">
-              Fill the form and I’ll reply with next steps. If you prefer email, you can message directly.
+              Fill the form and I’ll reply with next steps.
             </p>
 
             <div class="space-y-3 text-text-secondary">
@@ -534,7 +486,21 @@
           </div>
 
           <div>
-            <form id="leadForm" class="space-y-4">
+            <!-- NETLIFY ENABLED FORM -->
+            <form id="leadForm"
+                  name="lead"
+                  method="POST"
+                  data-netlify="true"
+                  netlify-honeypot="bot-field"
+                  action="/success.html"
+                  class="space-y-4">
+
+              <!-- Required for Netlify forms -->
+              <input type="hidden" name="form-name" value="lead" />
+              <p class="hidden">
+                <label>Don’t fill this out: <input name="bot-field" /></label>
+              </p>
+
               <div>
                 <label class="form-label" for="name">Name</label>
                 <input class="form-input" id="name" name="name" type="text" placeholder="Your name" required />
@@ -552,7 +518,8 @@
 
               <div>
                 <label class="form-label" for="help">What do you need help with?</label>
-                <textarea class="form-input min-h-[120px]" id="help" name="help" placeholder="Example: AI knowledge assistant, reporting automation, data pipeline, SaaS feature..." required></textarea>
+                <textarea class="form-input min-h-[120px]" id="help" name="help"
+                          placeholder="Example: AI knowledge assistant, reporting automation, data pipeline, SaaS feature..." required></textarea>
               </div>
 
               <button type="submit" class="w-full btn-primary py-4 rounded-full text-lg font-semibold">
@@ -560,7 +527,7 @@
               </button>
 
               <p class="text-text-muted text-sm text-center">
-                Prefer email? <a href="mailto:mosafdaralii@gmail.com" class="underline hover:text-blue-accent">Send directly</a>.
+                If you’re not on Netlify yet, this will still submit via email fallback.
               </p>
             </form>
           </div>
@@ -568,7 +535,7 @@
       </div>
 
       <div class="text-center mt-10 text-text-muted">
-        <p>© <span id="year"></span>Mosafdar  — AI & Automation Studio</p>
+        <p>© <span id="year"></span> Mosafdar  AI & Automation Studio</p>
       </div>
     </div>
   </section>
