@@ -1,103 +1,73 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" class="theme-dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mosafdar  AI & Automation Studio for SaaS & Agencies</title>
+  <title>Mosafdar — AI & Automation Studio for SaaS & Agencies</title>
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/profile.jpg" />
-
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-
-  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-
-  <!-- Custom CSS -->
   <link rel="stylesheet" href="css/style.css" />
-
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'dark-bg': '#000000',
-            'dark-card': '#0f0f23',
-            'elevated-card': '#1e1e3f',
-            'dark-border': '#1e3a8a',
-            'navy-primary': '#1e3a8a',
-            'navy-hover': '#1e40af',
-            'blue-accent': '#3b82f6',
-            'cyan-accent': '#06b6d4',
-            'text-primary': '#FFFFFF',
-            'text-secondary': '#e2e8f0',
-            'text-muted': '#94a3b8',
-            'red-accent': '#ef4444'
-          }
-        }
-      }
-    }
-  </script>
 </head>
 
-<body class="bg-dark-bg text-text-primary font-inter overflow-x-hidden">
+<body class="site-bg site-text font-inter overflow-x-hidden">
 
   <!-- Header -->
-  <header id="siteHeader" class="fixed top-0 w-full bg-dark-bg/90 backdrop-blur-sm z-50 border-b border-transparent">
+  <header id="siteHeader" class="fixed top-0 w-full backdrop-blur-sm z-50 border-b border-transparent header-bg">
     <nav class="container mx-auto px-6 lg:px-12 py-4 flex items-center justify-between">
 
       <a href="#top" class="flex items-center gap-3">
-        <div class="w-9 h-9 rounded-xl overflow-hidden border border-dark-border">
+        <div class="w-9 h-9 rounded-xl overflow-hidden site-border">
           <img src="images/profile.jpg" alt="Mosafdar" class="w-full h-full object-cover" />
         </div>
         <div class="leading-tight">
-          <div class="text-text-primary font-bold">Mosafdar</div>
-          <div class="text-text-muted text-xs">AI & Automation Studio</div>
+          <div class="site-text font-bold">Mosafdar</div>
+          <div class="site-muted text-xs">AI & Automation Studio</div>
         </div>
       </a>
 
       <!-- Desktop Nav -->
       <div class="hidden md:flex items-center space-x-8">
-        <a href="#offers" class="nav-link text-text-secondary hover:text-text-primary transition-colors">Offer</a>
-        <a href="#proof" class="nav-link text-text-secondary hover:text-text-primary transition-colors">Proof</a>
-        <a href="#process" class="nav-link text-text-secondary hover:text-text-primary transition-colors">Process</a>
-        <a href="#faq" class="nav-link text-text-secondary hover:text-text-primary transition-colors">FAQ</a>
+        <a href="#offers" class="nav-link site-secondary hover:site-text transition-colors">Offer</a>
+        <a href="#proof" class="nav-link site-secondary hover:site-text transition-colors">Proof</a>
+        <a href="#process" class="nav-link site-secondary hover:site-text transition-colors">Process</a>
+        <a href="#about" class="nav-link site-secondary hover:site-text transition-colors">About</a>
+        <a href="#faq" class="nav-link site-secondary hover:site-text transition-colors">FAQ</a>
 
         <!-- Theme Toggle -->
         <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle theme">
           <i id="themeIcon" class="fa-solid fa-moon"></i>
         </button>
 
-        <a href="#contact" class="btn-primary px-6 py-2 rounded-full transition-colors text-text-primary font-medium">
+        <a href="#contact" class="btn-primary px-6 py-2 rounded-full font-medium">
           Book a Call
         </a>
       </div>
 
-      <!-- Mobile Menu Button -->
+      <!-- Mobile -->
       <div class="md:hidden flex items-center gap-3">
-        <!-- Theme Toggle (mobile) -->
         <button id="themeToggleMobile" class="theme-toggle" type="button" aria-label="Toggle theme">
           <i id="themeIconMobile" class="fa-solid fa-moon"></i>
         </button>
 
-        <button class="text-text-primary" aria-label="Open menu" onclick="toggleMobileMenu()">
+        <button class="site-text" aria-label="Open menu" onclick="toggleMobileMenu()">
           <i class="fas fa-bars text-xl"></i>
         </button>
       </div>
     </nav>
 
     <!-- Mobile Nav -->
-    <div id="mobile-menu" class="hidden md:hidden bg-dark-bg border-t border-dark-border">
+    <div id="mobile-menu" class="hidden md:hidden border-t site-border header-bg">
       <div class="container mx-auto px-6 py-4 space-y-4">
-        <a href="#offers" class="nav-link block text-text-secondary hover:text-text-primary transition-colors">Offer</a>
-        <a href="#proof" class="nav-link block text-text-secondary hover:text-text-primary transition-colors">Proof</a>
-        <a href="#process" class="nav-link block text-text-secondary hover:text-text-primary transition-colors">Process</a>
-        <a href="#faq" class="nav-link block text-text-secondary hover:text-text-primary transition-colors">FAQ</a>
-        <a href="#contact" class="nav-link block btn-primary px-6 py-3 rounded-full text-text-primary font-medium text-center">
+        <a href="#offers" class="nav-link block site-secondary hover:site-text transition-colors">Offer</a>
+        <a href="#proof" class="nav-link block site-secondary hover:site-text transition-colors">Proof</a>
+        <a href="#process" class="nav-link block site-secondary hover:site-text transition-colors">Process</a>
+        <a href="#about" class="nav-link block site-secondary hover:site-text transition-colors">About</a>
+        <a href="#faq" class="nav-link block site-secondary hover:site-text transition-colors">FAQ</a>
+        <a href="#contact" class="nav-link block btn-primary px-6 py-3 rounded-full font-medium text-center">
           Book a Call
         </a>
       </div>
@@ -106,58 +76,31 @@
 
   <!-- Hero -->
   <section id="top" class="pt-32 pb-20 px-6 lg:px-12 hero-section">
-    <div class="container mx-auto max-w-5xl">
-      <div class="text-center">
-        <div class="mb-6">
-          <span class="inline-flex items-center gap-2 badge-pill">
-            <i class="fa-solid fa-bolt text-cyan-accent"></i>
-            <span>For B2B SaaS founders & marketing agencies</span>
-          </span>
-        </div>
-
-        <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight">
-          Ship AI features & automation systems<br />
-          <span class="tech-highlight">without hiring a full team</span>
-        </h1>
-
-        <p class="text-xl text-text-secondary mb-10 leading-relaxed max-w-3xl mx-auto">
-          I build practical AI tools, internal dashboards, and automation pipelines that reduce manual work,
-          unlock insights, and move your product faster.
-        </p>
-
-        <div class="flex flex-col sm:flex-row gap-4 justify-center">
-          <a href="#contact" class="nav-link btn-primary px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-[1.02]">
-            Book a Free Strategy Call
-          </a>
-          <a href="#offers" class="nav-link btn-secondary px-8 py-4 rounded-full text-lg font-semibold transition-all">
-            See the Offer
-          </a>
-        </div>
-
-        <div class="mt-10 flex flex-wrap justify-center gap-4 text-text-muted">
-          <div class="pill"><i class="fa-solid fa-check text-cyan-accent"></i> MVP → Production</div>
-          <div class="pill"><i class="fa-solid fa-check text-cyan-accent"></i> RAG / LLM Apps</div>
-          <div class="pill"><i class="fa-solid fa-check text-cyan-accent"></i> Automations & Integrations</div>
-          <div class="pill"><i class="fa-solid fa-check text-cyan-accent"></i> Clean, scalable backend</div>
-        </div>
+    <div class="container mx-auto max-w-5xl text-center">
+      <div class="mb-6">
+        <span class="badge-pill inline-flex items-center gap-2">
+          <i class="fa-solid fa-bolt accent-cyan"></i>
+          <span>For B2B SaaS founders & marketing agencies</span>
+        </span>
       </div>
 
-      <div class="mt-14 grid md:grid-cols-3 gap-6">
-        <div class="stat-card">
-          <div class="stat-title">Delivery Style</div>
-          <div class="stat-value">Fast iterations</div>
-          <div class="stat-sub">Weekly demos + clear milestones</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-title">Build Focus</div>
-          <div class="stat-value">AI + Automation</div>
-          <div class="stat-sub">RAG, internal tools, pipelines</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-title">Quality</div>
-          <div class="stat-value">Production-ready</div>
-          <div class="stat-sub">Testing, observability, docs</div>
-        </div>
+      <h1 class="text-4xl md:text-6xl font-extrabold mb-6 leading-tight site-text">
+        Ship AI features & automation systems<br />
+        <span class="tech-highlight">without hiring a full team</span>
+      </h1>
+
+      <p class="text-xl site-secondary mb-10 leading-relaxed max-w-3xl mx-auto">
+        I build practical AI tools, internal dashboards, and automation pipelines that reduce manual work,
+        unlock insights, and move your product faster.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="#contact" class="nav-link btn-primary px-8 py-4 rounded-full text-lg font-semibold">
+          Book a Free Strategy Call
+        </a>
+        <a href="#offers" class="nav-link btn-secondary px-8 py-4 rounded-full text-lg font-semibold">
+          See the Offer
+        </a>
       </div>
     </div>
   </section>
@@ -166,56 +109,8 @@
   <section id="offers" class="py-20 px-6 lg:px-12">
     <div class="container mx-auto max-w-6xl">
       <div class="text-center mb-14">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">A simple offer that founders say “yes” to</h2>
-        <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-          Productized services designed for speed, clarity, and measurable outcomes.
-        </p>
-      </div>
-
-      <div class="grid lg:grid-cols-2 gap-8 mb-12">
-        <div class="bg-dark-card border border-dark-border rounded-2xl p-8">
-          <h3 class="text-2xl font-bold mb-4">Great fit if you are…</h3>
-          <div class="space-y-3 text-text-secondary">
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-check text-cyan-accent mt-1"></i>
-              <span>A B2B SaaS founder who needs AI features or internal tooling fast</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-check text-cyan-accent mt-1"></i>
-              <span>A marketing/growth agency that wants white-label automation & dashboards</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-check text-cyan-accent mt-1"></i>
-              <span>You have manual ops / reporting pain and want to automate it properly</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-check text-cyan-accent mt-1"></i>
-              <span>You value clean architecture and long-term maintainability</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="bg-dark-card border border-dark-border rounded-2xl p-8">
-          <h3 class="text-2xl font-bold mb-4">Not a fit if you…</h3>
-          <div class="space-y-3 text-text-secondary">
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-xmark text-red-accent mt-1"></i>
-              <span>Want the cheapest developer  not outcome-focused delivery</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-xmark text-red-accent mt-1"></i>
-              <span>Need a simple WordPress/landing-page-only job</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-xmark text-red-accent mt-1"></i>
-              <span>Want “AI” as a buzzword without a real business use case</span>
-            </div>
-            <div class="flex items-start gap-3">
-              <i class="fa-solid fa-xmark text-red-accent mt-1"></i>
-              <span>Expect instant delivery with zero collaboration</span>
-            </div>
-          </div>
-        </div>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 site-text">A simple offer that founders say “yes” to</h2>
+        <p class="text-xl site-secondary max-w-3xl mx-auto">Productized services designed for speed, clarity, and outcomes.</p>
       </div>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -224,7 +119,7 @@
           <h3 class="offer-title">AI Internal Tools</h3>
           <p class="offer-sub">RAG apps, knowledge assistants, reporting copilots</p>
           <ul class="offer-list">
-            <li>Vector search + data connectors</li>
+            <li>Vector search + connectors</li>
             <li>Role-based access</li>
             <li>Evaluation & monitoring</li>
           </ul>
@@ -236,7 +131,7 @@
           <p class="offer-sub">Replace manual work with reliable pipelines</p>
           <ul class="offer-list">
             <li>ETL + scheduled jobs</li>
-            <li>Integrations (Stripe, HubSpot, etc.)</li>
+            <li>Integrations</li>
             <li>Alerts & observability</li>
           </ul>
         </div>
@@ -265,11 +160,10 @@
       </div>
 
       <div class="text-center mt-12">
-        <a href="#contact" class="nav-link inline-flex items-center gap-2 btn-primary px-8 py-4 rounded-full text-lg font-semibold">
+        <a href="#contact" class="nav-link btn-primary px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-2">
           <span>Book a Call</span>
           <i class="fa-solid fa-arrow-right"></i>
         </a>
-        <div class="text-text-muted mt-3">Typical projects are scoped in 1–2 calls with clear milestones.</div>
       </div>
     </div>
   </section>
@@ -278,10 +172,8 @@
   <section id="proof" class="py-20 px-6 lg:px-12">
     <div class="container mx-auto max-w-6xl">
       <div class="text-center mb-14">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">Proof: systems I build in the real world</h2>
-        <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-          A few representative builds. If you want, I can share deeper technical breakdowns on the call.
-        </p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 site-text">Proof: systems I build in the real world</h2>
+        <p class="text-xl site-secondary max-w-3xl mx-auto">Representative builds. Deeper breakdowns available on call.</p>
       </div>
 
       <div class="grid lg:grid-cols-3 gap-8">
@@ -294,12 +186,9 @@
             </div>
           </div>
           <div class="case-body">
-            <div class="case-point"><i class="fa-solid fa-check text-cyan-accent"></i> Ingest + search large document sets</div>
-            <div class="case-point"><i class="fa-solid fa-check text-cyan-accent"></i> Secure access + clean API design</div>
-            <div class="case-point"><i class="fa-solid fa-check text-cyan-accent"></i> Caching + reliability baked in</div>
-          </div>
-          <div class="case-tags">
-            <span class="tag">Python</span><span class="tag">FastAPI</span><span class="tag">Postgres</span><span class="tag">Redis</span>
+            <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> Ingest + search doc sets</div>
+            <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> Secure access + clean APIs</div>
+            <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> Caching + reliability</div>
           </div>
         </div>
 
@@ -308,16 +197,13 @@
             <div class="case-emoji">📊</div>
             <div>
               <div class="case-title">Agency Reporting Dashboard</div>
-              <div class="case-sub">Automations • Integrations • KPIs</div>
+              <div class="case-sub">Integrations • KPIs • Automation</div>
             </div>
           </div>
           <div class="case-body">
-            <div class="case-point"><i class="fa-solid fa-check text-cyan-accent"></i> Pull data from multiple tools</div>
-            <div class="case-point"><i class="fa-solid fa-check text-cyan-accent"></i> Auto-generate weekly reports</div>
-            <div class="case-point"><i class="fa-solid fa-check text-cyan-accent"></i> Client portal ready for white-label</div>
-          </div>
-          <div class="case-tags">
-            <span class="tag">ETL</span><span class="tag">APIs</span><span class="tag">Dashboards</span><span class="tag">Automation</span>
+            <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> Pull data from tools</div>
+            <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> Auto-generate reports</div>
+            <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> White-label ready</div>
           </div>
         </div>
 
@@ -330,19 +216,11 @@
             </div>
           </div>
           <div class="case-body">
-            <div class="case-point"><i class="fa-solid fa-check text-cyan-accent"></i> Large-scale scraping pipelines</div>
-            <div class="case-point"><i class="fa-solid fa-check text-cyan-accent"></i> Validation + quality checks</div>
-            <div class="case-point"><i class="fa-solid fa-check text-cyan-accent"></i> Scheduled runs + alerting</div>
-          </div>
-          <div class="case-tags">
-            <span class="tag">Scrapy</span><span class="tag">Airflow</span><span class="tag">Selenium</span><span class="tag">Postgres</span>
+            <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> Large-scale pipelines</div>
+            <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> Quality checks</div>
+            <div class="case-point"><i class="fa-solid fa-check accent-cyan"></i> Alerts & runs</div>
           </div>
         </div>
-      </div>
-
-      <div class="text-center mt-12">
-        <a href="#contact" class="nav-link text-navy-primary hover:text-blue-accent underline">Talk through your use-case</a>
-        <span class="text-text-secondary">  I’ll suggest the quickest path to impact.</span>
       </div>
     </div>
   </section>
@@ -351,51 +229,66 @@
   <section id="process" class="py-20 px-6 lg:px-12">
     <div class="container mx-auto max-w-5xl">
       <div class="text-center mb-14">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">How we deliver (fast, clean, measurable)</h2>
-        <p class="text-xl text-text-secondary max-w-3xl mx-auto">
-          You get clarity, milestones, and weekly progress  without chaos.
-        </p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 site-text">How we deliver</h2>
+        <p class="text-xl site-secondary max-w-3xl mx-auto">Fast iterations, clean architecture, measurable outcomes.</p>
       </div>
 
       <div class="space-y-6">
-        <div class="process-card">
-          <div class="step-badge">1</div>
-          <div>
-            <h3 class="text-xl font-bold mb-1">Discovery & Scoping</h3>
-            <p class="text-text-secondary">Define the outcome, constraints, and success metrics. We agree on the simplest solution that works.</p>
-          </div>
-        </div>
-
-        <div class="process-card">
-          <div class="step-badge">2</div>
-          <div>
-            <h3 class="text-xl font-bold mb-1">Architecture & Plan</h3>
-            <p class="text-text-secondary">Clean system design, data flows, milestones, and risk mitigation before heavy coding.</p>
-          </div>
-        </div>
-
-        <div class="process-card">
-          <div class="step-badge">3</div>
-          <div>
-            <h3 class="text-xl font-bold mb-1">Build & Ship</h3>
-            <p class="text-text-secondary">Weekly demos, tight feedback loop, production practices (tests, logging, caching, docs).</p>
-          </div>
-        </div>
-
-        <div class="process-card">
-          <div class="step-badge">4</div>
-          <div>
-            <h3 class="text-xl font-bold mb-1">Launch & Support</h3>
-            <p class="text-text-secondary">Deployment, monitoring, and handoff. Optional ongoing improvements as your product grows.</p>
-          </div>
-        </div>
+        <div class="process-card"><div class="step-badge">1</div><div><h3 class="text-xl font-bold site-text mb-1">Discovery</h3><p class="site-secondary">Define outcome, scope, and success metrics.</p></div></div>
+        <div class="process-card"><div class="step-badge">2</div><div><h3 class="text-xl font-bold site-text mb-1">Plan</h3><p class="site-secondary">Architecture + milestones before heavy coding.</p></div></div>
+        <div class="process-card"><div class="step-badge">3</div><div><h3 class="text-xl font-bold site-text mb-1">Build</h3><p class="site-secondary">Weekly demos, tight feedback loop.</p></div></div>
+        <div class="process-card"><div class="step-badge">4</div><div><h3 class="text-xl font-bold site-text mb-1">Launch</h3><p class="site-secondary">Deployment, monitoring, and handoff.</p></div></div>
       </div>
+    </div>
+  </section>
 
-      <div class="text-center mt-12">
-        <a href="#contact" class="nav-link btn-primary px-8 py-4 rounded-full text-lg font-semibold inline-flex items-center gap-2">
-          <span>Book a Call</span>
-          <i class="fa-solid fa-arrow-right"></i>
-        </a>
+  <!-- ✅ ABOUT RESTORED -->
+  <section id="about" class="py-20 px-6 lg:px-12">
+    <div class="container mx-auto max-w-6xl">
+      <div class="grid lg:grid-cols-2 gap-14 items-center">
+        <div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4 site-text">Hi, I’m Muhammad Safdar (Mosafdar)</h2>
+          <p class="text-xl site-secondary mb-6">
+            I build AI & automation systems for B2B SaaS teams and marketing agencies — designed to ship fast and stay maintainable.
+          </p>
+
+          <div class="space-y-4 site-secondary leading-relaxed">
+            <p>
+              I specialize in Python backends, data pipelines, RAG/LLM integrations, and automation systems that reduce manual work and improve decision-making.
+            </p>
+            <p>
+              Based in Pakistan, working globally with async-friendly communication and weekly demos.
+            </p>
+          </div>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <span class="tag">FastAPI</span>
+            <span class="tag">Django</span>
+            <span class="tag">PostgreSQL</span>
+            <span class="tag">Redis</span>
+            <span class="tag">RAG/LLMs</span>
+            <span class="tag">AWS</span>
+            <span class="tag">ETL</span>
+          </div>
+
+          <div class="mt-8 flex items-center gap-5">
+            <a href="https://linkedin.com/in/mosafdar" class="social-link" target="_blank" rel="noopener">
+              <i class="fab fa-linkedin text-2xl"></i>
+            </a>
+            <a href="https://github.com/mosafdarr" class="social-link" target="_blank" rel="noopener">
+              <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a href="mailto:mosafdaralii@gmail.com" class="social-link">
+              <i class="fas fa-envelope text-2xl"></i>
+            </a>
+          </div>
+        </div>
+
+        <div class="flex justify-center lg:justify-end">
+          <div class="profile-card">
+            <img src="images/profile.jpg" alt="Mosafdar" class="w-full h-full object-cover" />
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -404,49 +297,14 @@
   <section id="faq" class="py-20 px-6 lg:px-12">
     <div class="container mx-auto max-w-5xl">
       <div class="text-center mb-12">
-        <h2 class="text-3xl md:text-4xl font-bold mb-4">FAQ</h2>
-        <p class="text-xl text-text-secondary">The questions people ask before they book.</p>
+        <h2 class="text-3xl md:text-4xl font-bold mb-4 site-text">FAQ</h2>
+        <p class="text-xl site-secondary">Questions people ask before booking.</p>
       </div>
 
       <div class="space-y-4">
         <details class="faq-item" open>
-          <summary>
-            How do projects start?
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <div class="faq-content">
-            We do a short call to clarify goals, then I send a simple scope with milestones and timeline. Most projects start within days.
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Do you work hourly or fixed price?
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <div class="faq-content">
-            Prefer fixed-scope milestones for clarity. For ongoing work, we can do a monthly retainer.
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            Can you work with our existing stack?
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <div class="faq-content">
-            Yes. I usually integrate into what you already have and improve incrementally. Python/FastAPI/Django are my core.
-          </div>
-        </details>
-
-        <details class="faq-item">
-          <summary>
-            What kind of AI do you build?
-            <i class="fa-solid fa-chevron-down"></i>
-          </summary>
-          <div class="faq-content">
-            Practical AI: RAG assistants for internal knowledge, AI-powered analysis/reporting, and workflow automation  not vague “AI for AI’s sake”.
-          </div>
+          <summary>How do projects start? <i class="fa-solid fa-chevron-down"></i></summary>
+          <div class="faq-content">We do a short call, then I send milestones + scope. Most projects start within days.</div>
         </details>
       </div>
     </div>
@@ -455,95 +313,75 @@
   <!-- Contact -->
   <section id="contact" class="py-20 px-6 lg:px-12">
     <div class="container mx-auto max-w-5xl">
-      <div class="bg-dark-card border border-dark-border rounded-3xl p-8 md:p-12">
+      <div class="card-surface rounded-3xl p-8 md:p-12">
         <div class="grid lg:grid-cols-2 gap-10 items-start">
+
           <div>
-            <span class="inline-flex items-center gap-2 badge-pill mb-5">
-              <i class="fa-solid fa-calendar text-cyan-accent"></i>
+            <span class="badge-pill inline-flex items-center gap-2 mb-5">
+              <i class="fa-solid fa-calendar accent-cyan"></i>
               <span>Free strategy call (15–25 mins)</span>
             </span>
 
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">
-              Tell me what you’re building  I’ll suggest the fastest path to impact
+            <h2 class="text-3xl md:text-4xl font-bold mb-4 site-text">
+              Tell me what you’re building — I’ll suggest the fastest path to impact
             </h2>
 
-            <p class="text-xl text-text-secondary mb-6">
-              Fill the form and I’ll reply with next steps.
-            </p>
+            <p class="text-xl site-secondary mb-6">Fill the form and I’ll reply with next steps.</p>
 
-            <div class="space-y-3 text-text-secondary">
+            <div class="space-y-3 site-secondary">
               <div class="flex items-center gap-3">
-                <i class="fa-solid fa-envelope text-cyan-accent"></i>
-                <button class="inline-flex items-center gap-2 underline hover:text-blue-accent" onclick="copyToClipboard('mosafdaralii@gmail.com')">
-                  mosafdaralii@gmail.com <span class="text-text-muted text-sm">(click to copy)</span>
+                <i class="fa-solid fa-envelope accent-cyan"></i>
+                <button class="underline hover:opacity-80" onclick="copyToClipboard('mosafdaralii@gmail.com')">
+                  mosafdaralii@gmail.com <span class="site-muted text-sm">(click to copy)</span>
                 </button>
-              </div>
-              <div class="flex items-center gap-3">
-                <i class="fa-solid fa-location-dot text-cyan-accent"></i>
-                <span>Pakistan • Working globally (remote)</span>
               </div>
             </div>
           </div>
 
           <div>
-            <!-- NETLIFY ENABLED FORM -->
-            <form id="leadForm"
-                  name="lead"
-                  method="POST"
-                  data-netlify="true"
-                  netlify-honeypot="bot-field"
-                  action="/success.html"
-                  class="space-y-4">
-
-              <!-- Required for Netlify forms -->
-              <input type="hidden" name="form-name" value="lead" />
-              <p class="hidden">
-                <label>Don’t fill this out: <input name="bot-field" /></label>
-              </p>
-
+            <!-- Static-site friendly: uses Formspree if set, else mailto fallback -->
+            <form id="leadForm" class="space-y-4">
               <div>
                 <label class="form-label" for="name">Name</label>
-                <input class="form-input" id="name" name="name" type="text" placeholder="Your name" required />
+                <input class="form-input" id="name" name="name" type="text" required />
               </div>
 
               <div>
                 <label class="form-label" for="email">Email</label>
-                <input class="form-input" id="email" name="email" type="email" placeholder="you@company.com" required />
+                <input class="form-input" id="email" name="email" type="email" required />
               </div>
 
               <div>
                 <label class="form-label" for="company">Company / Product</label>
-                <input class="form-input" id="company" name="company" type="text" placeholder="Your SaaS or agency name" />
+                <input class="form-input" id="company" name="company" type="text" />
               </div>
 
               <div>
                 <label class="form-label" for="help">What do you need help with?</label>
-                <textarea class="form-input min-h-[120px]" id="help" name="help"
-                          placeholder="Example: AI knowledge assistant, reporting automation, data pipeline, SaaS feature..." required></textarea>
+                <textarea class="form-input min-h-[120px]" id="help" name="help" required></textarea>
               </div>
 
               <button type="submit" class="w-full btn-primary py-4 rounded-full text-lg font-semibold">
                 Send Request
               </button>
 
-              <p class="text-text-muted text-sm text-center">
-                If you’re not on Netlify yet, this will still submit via email fallback.
+              <p class="site-muted text-sm text-center">
+                Works via Formspree (recommended) or email fallback.
               </p>
             </form>
           </div>
+
         </div>
       </div>
 
-      <div class="text-center mt-10 text-text-muted">
-        <p>© <span id="year"></span> Mosafdar  AI & Automation Studio</p>
+      <div class="text-center mt-10 site-muted">
+        <p>© <span id="year"></span> Mosafdar — AI & Automation Studio</p>
       </div>
     </div>
   </section>
 
-  <!-- Toast -->
   <div id="toast" class="toast hidden" role="status" aria-live="polite"></div>
 
-  <!-- JS -->
   <script src="js/script.js"></script>
 </body>
 </html>
